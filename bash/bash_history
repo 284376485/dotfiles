@@ -1,0 +1,500 @@
+ls
+ll myvideos-2.0.1.exe 
+ll
+ls
+ll
+chmod +x myvideos-2.0.1.exe
+ls
+ll
+chmod +wxr myvideos-2.0.1.exe
+ll
+chmod 777 myvideos-2.0.1.exe
+ll
+iptables -t nat -vnL  --line |grep 210.242.230
+iptables -t nat -R POSTROUTING 38  -d 210.242.230.0/24 -j SNAT --to 220.128.48.25-220.128.48.29
+iptables -t nat -vnL  --line |grep 210.242.230
+iptables -t nat -vnL  --line
+iptables -t nat -vnL  --line |grep 59.24.3
+iptables -t nat -I POSTROUTING 5 -d 59.24.3.0/24 -j SNAT --to 220.128.48.25-220.128.48.29
+iptables -t nat -vnL
+iptables -t nat -vnL
+iptables -t nat -vnL  |grep  210.142
+iptables -t nat -vnL  |grep  210.242
+ifconfig |grep 22.128
+ifconfig |grep 220.128
+iptables -t nat -vnL  |grep  210.142  --line
+iptables -t nat -vnL  --line
+iptables -t nat -D PREROUTING 39
+iptables  -D PREROUTING 39
+iptables -t nat  -D PREROUTING 39
+iptables   -D -t nat PREROUTING 39
+iptables    -t nat -D PREROUTING 39
+iptables -t nat -I POSTROUTING   1  -d   210.242.230.0/24 -j SNAT --to  220.128.48.26-220.128.48.29
+iptables -t nat -vnL  --line
+iptables    -t nat -D PREROUTING 39
+iptables -t nat -vnL  --line
+iptables    -t nat -D POSTROUTING  1
+iptables -t nat -vnL  --line
+29.5 ms (30.7 avg, 0% loss)
+203.78.190.14 : [22], 84 bytes, 220.128.48.25g, 0% loss)
+ mtr -n 163.177.72.141
+ip route tab
+ip route table
+iptables -vnL  --line 
+iptables -t nat -nvL
+iptables -t nat -nvL | grep  210.242.230
+to 210.242.230
+iptables -t nat -vnL  --line
+ips |grep    37.252.0.0/16       to:203.78.190.16-203.78.190.60 
+10       1    53 SNAT       all  --  *      *       0.0.0.0/0            66.155.0.0/16       to:203.78.190.15-203.78.190.60 
+11       0     0 SNAT       all  --  *      *       0.0.0.0/0            207.198.0.0/16      to:203.78.190.15-203.78.190.60 
+12      55  2915 SNAT       all  --  *      *       0.0.0.0/0            64.34.0.0/16        to:203.78.190.15-203.78.190.60 
+13       0     0 SNAT       all  --  *      *       0.0.0.0/0            5.200.0.0/16        to:203.78.190.15-203.78.190.60 
+14       0     0 SNAT       all  --  *      *       0.0.0.0/0            31.204.0.0/16       to:203.78.190.15-203.78.190.60 
+15       0     0 SNAT       all  --  *      *       0.0.0.0/0            112.121.78.0/24     to:203.78.190.15-203.78.190.60 
+16     352 25589 SNAT       all  --  *      *       0.0.0.0/0            112.121.83.0/24     to:203.78.190.15-203.78.190.60 
+ips |grep 210.242.230
+iptables -t nat -vnL  --line |grep 210.242.230
+to 210.242.230
+iptables -t nat -vnL  |grep 210.242.230
+ifconfig |grep eth
+ip add show |grep eth
+iptables -t nat -R POSTROUTING  39  -d 210.242.230.0/2 -j SNAT --to 175.111.255.249-175.111.255.253
+iptables -t nat -R POSTROUTING  39  -d 210.242.230.0/24 -j SNAT --to 175.111.255.249-175.111.255.253
+mtr 112.121.83.4
+mtr 203.66.119.45
+cd /home/sh/
+cp getss5pas.sh getss5pas.sh.20140516
+vi getss5pas.sh 
+./getss5pas.sh
+cd /data0/soft/s5server_443/
+ll -h s5user.cfg 
+grep wpp12 s5user.cfg 
+tail -f s5access201405.log
+ping l3cdn.riotgames.com
+ip route get 203.69.81.18
+f 1.58.12.1 
+ip ro del 203.69.81.18 via 1.58.12.1 dev tw0125-tw06
+ips | grep 203.69
+ip ro del 203.69.0.0/16 via 1.58.12.1 dev tw0125-tw06 
+to 203.69
+ifconfig | grep 71.130
+iptables -t nat -nvL | grep 71.130
+ping 203.69.81.18
+ip route get 203.69.81.18
+to 203.69
+ips  |grep bj
+ips  |grep bj06
+f 10.128.0.77
+f 10.128.0.78
+f 10.128.0.79
+f 10.128.0.77
+ips  |grep bj01
+fl 10.128.0.69
+ip ro re 203.69.0.0/16 via 10.128.0.69 dev tw0125-bj01
+to 203.69
+ip ro del 203.69.0.0/16 via 10.128.0.69 dev tw0125-bj01
+ip ru 
+cat socks5.ini
+ips table tw01
+f  220.128.48.30 
+to 203.69
+ips | grep tw053
+f 1.20.11.2
+ip ro re 203.69.0.0/16 via 1.20.11.2 dev tw0125-tw053
+to 203.69
+ip ro del 203.69.0.0/16 via 1.20.11.2 dev tw0125-tw053
+ips | grep us01
+fl 1.57.10.1
+ip ro re 203.69.0.0/16 via 1.57.10.1 dev tw01-us01 
+to 203.69
+ip ro del 203.69.0.0/16 via 1.57.10.1 dev tw01-us01 
+tail -f s5user.cfg 
+tail -f s5access201405.log
+mtr 112.121.88.56
+mtr 124.108.140.74
+mtr 124.108.140.74 
+mtr 124.108.140.74 --address 206.161.224.130
+vi /home/vpn/firewall.sh 
+ping 8.8.8.8 -I 203.78.180.17
+ping 8.8.8.8 -I 203.78.180.25
+ifconfig
+ifconfig|less
+vi /home/vpn/firewall.sh 
+/home/vpn/firewall.sh restart
+vi /home/vpn/firewall.sh 
+iptables -vnL -t nat
+iptables -vnL -t nat|grep 1080
+/home/vpn/firewall.sh restart
+iptables -vnL -t nat|grep 1080
+vi /home/vpn/firewall.sh 
+/home/vpn/firewall.sh restart
+scp -rP2121 /home/vpn/firewall.sh root@t6.lonlife.net:/home/vpn/
+iptables -t nat -vnL |grep 210.242.230
+iptables -t nat -vnL 
+iptables -t nat -vnL --line
+iptables -t nat -I POSTROUTING 1  -d 210.242.230.0/24 -j SNAT --to 203.78.180.22-203.78.180.25 
+iptables -t nat -vnL --line
+ifconfig  |grep tw0228
+iptables -t nat -vnL 
+iptables -t nat -vnL | grep 210.242
+iptables -t nat -vnL --line
+iptables -t nat -vnL --line | grep 210.242
+iptables -t nat -I POSTROUTING  12  -d 210.242.230.0/24 -j SNAT --to 175.111.255.249-175.111.255.253
+iptables -t nat -vnL --line | grep 210.242
+to 210.242.230
+fl 203.116.132.191
+ls
+clear
+cd /home/www/myvideos/
+ls
+clear
+git rempte -v
+git remote -v
+clear
+ls
+cd Apps/
+ls
+git status
+pwd
+clear
+ls
+l
+cd MyVideo/
+ls
+clear
+ls
+vim index.php 
+ls
+php --ini
+php --ini|grep php.ini
+vim /etc/php.
+vim /etc/php.ini
+clear
+ls
+vim protected/controllers/BossMvController.php 
+git status
+git co protected/controllers/BossMvController.php 
+clear
+git st
+clear
+git st
+ls
+vim index.php 
+git st
+vim /home/www/myvideos/Apps/MyVideo/protected/views/bossMv/_form.php
+exit
+netstat -tnl
+netstat -tnl|grep 8901
+clear
+exit
+ls
+cd /home/www/myvideos/Apps/MyVideo/
+ls
+clear
+ls
+cd protected/
+ls
+cd runtime/
+lks
+ls
+less application.log
+exit
+ls
+top
+ps aux|grep java
+ls
+df -h
+cd ho
+ls
+cd apache-solr-3.6.2/
+ls
+du -sh
+cd movies/
+ls
+du -sh *
+cd logs/
+ll
+tail -f stderrout-2014_05_19.log
+cd /data/www/
+ls
+cd myvideos
+ls
+cd Apps/MyVideo/
+ls
+vim protected/commands/DemoCommand.php 
+vim protected/commands/DemoCommand.php index 100 100
+php protected/commands/DemoCommand.php index 100 100
+fg
+php protected/yiic.php 
+php protected/yiic.php test
+ps aux|grep php
+fg
+php protected/yiic.php 
+php protected/yiic.php test
+fg
+php protected/yiic.php test
+fg
+php protected/yiic.php test
+fg
+git st
+fg
+php -l protected/controllers/BossMvController.php
+fg
+ll /tmp/
+fg
+ls
+ll /tmp/
+fg
+ll /tmp/
+fg
+pwd
+ll /home/www/myvideos/Apps/MyVideo/protected/controllers/BossMvController.php 
+fg
+ll /tmp/
+ll /tmp/myvideos/
+ll /tmp/
+fg
+php -l /home/www/myvideos/Apps/MyVideo/protected/controllers/BossMvController.php
+fg
+touch /tmp/debug_solr
+ll /tmp/
+chmod 777 /tmp/debug_solr 
+ll /tmp/
+fg
+tail -f protected/runtime/application.log*
+fg
+mysql -uroot -proot12
+php protected/yiic.php demo 34522 34522
+fg
+php protected/yiic.php demo 34522 34522
+fg
+mysql -uroot -proot12 newmv -e "select click_count from mv_video where vid = 34522\G"
+fg
+mysql -uroot -proot12 newmv -e "select * from mv_video where vid = 34522\G"
+fg
+php protected/yiic.php demo 34522 34522
+fg
+php protected/yiic.php demo 34522 34522
+fg
+mysql -uroot -proot12 newmv -e "select * from mv_video where vid = 34522;desc mv_videos;"
+mysql -uroot -proot12 newmv -e "select * from mv_video where vid = 34522;desc mv_videos\G"
+mysql -uroot -proot12 newmv -e "select * from mv_video where vid = 34522;desc mv_video\G"
+mysql -uroot -proot12 newmv -e "select * from mv_video where vid = 34522;desc mv_video"
+fg
+php protected/yiic.php demo 34522 34522
+fg
+php protected/yiic.php demo 34522 34522
+fg
+logout
+cd /home/www/myvideos/Apps/
+ls
+clea
+rls
+cd MyVideo/
+ls
+clear
+ls
+vim protected/controllers/BossMvController.php 
+mysql -u root -p
+ls
+clear
+ls
+vim protected/controllers/BossMvController.php 
+exit
+vim  /etc/hosts
+cd /home/sh
+./getss5pas.sh
+cd /home/www/myvideos/
+ls
+git status
+vim Apps/MyVideo/protected/controllers/BossMvController.php
+cd /home/www/myvideos/
+ls
+git status
+vim Apps/MyVideo/protected/controllers/BossMvController.php
+ls
+cd /home/www/myvideos/Apps/MyVideo/
+ls
+whoami
+ls
+clear
+ls
+cd /home/www/myvideos/Apps/MyVideo/
+ls
+vim protected/controllers/BossMvController.php
+fg
+vim protected/controllers/BossMvController.php
+vim protected/views/bossMv/_form.php 
+git status
+git co protected/views/bossMv/_form.php 
+git status
+git add --all
+git ci
+git status
+git push origin master
+su git
+exit
+top
+ls
+cd apache-solr-3.6.2/
+ls
+cd ..
+ls
+mysql -uroot -proot12
+cd /home/www/myvideos/
+ls
+cd Apps/
+ls
+cd MyVideo/
+ls
+php protected/yiic.php 
+php protected/yiic.php demo  34655 34655
+mysql -uroot -proot12 newmv -e "set names utf8;select * from mv_video where vid = 34663\G"
+php protected/yiic.php demo  34663 34663
+vim protected/controllers/BossMvController.php 
+fg
+pwd
+fg
+ll /home/apache-solr-3.6.2/movies/solr/conf/schema.xml 
+fg
+mysql -uroot -proot12 newmv -e "set names utf8;select * from mv_video where vid = 34663\G;desc mv_video;"
+fg
+git diff
+fg
+git log protected/controllers/BossMvController.php
+mysql -uroot -proot12 newmv -e "set names utf8;select vid, created from mv_video order vid desc limit 10;"
+mysql -uroot -proot12 newmv -e "set names utf8;select vid, created from mv_video order by vid desc limit 10;"
+mysql -uroot -proot12 newmv -e "set names utf8;select * from mv_video order by vid desc limit 10;"
+mysql -uroot -proot12 newmv -e "set names utf8;select vid, v_created from mv_video order by vid desc limit 10;"
+git log protected/controllers/BossMvController.php
+git diff d43dc31f519baa331d610c017a3c8c7108661597 HEAD
+git diff d43dc31f519baa331d610c017a3c8c7108661597 
+git show d43dc31f519baa331d610c017a3c8c7108661597 
+git show d43dc31f519baa331d610c017a3c8c7108661597 --summary
+git show d43dc31f519baa331d610c017a3c8c7108661597 
+git log protected/controllers/BossMvController.php
+git log index.php 
+git show 25d323dca109eea2c5aa3b401b5d89b6636e77ab
+fg
+git log protected/controllers/BossMvController.php
+git diff e77f428c95d675f3b988cdbeb1229bcd3cf150a9
+git diff e77f428c95d675f3b988cdbeb1229bcd3cf150a9|grep v_created
+git log protected/controllers/BossMvController.php
+git diff c9f86f6a700231c41c7dd71bc4fd986852fb0bba|grep v_created
+fg
+git diff c9f86f6a700231c41c7dd71bc4fd986852fb0bba|grep '2012-10-10'
+git diff c9f86f6a700231c41c7dd71bc4fd986852fb0bba|grep '2012-10-10' -n
+git diff c9f86f6a700231c41c7dd71bc4fd986852fb0bba|grep '2012-10-10' -rn
+git log protected/controllers/BossMvController.php
+git diff 46a37f295df70e63cff2d33c402589e407990bad|grep '2012-10-10' 
+git diff 46a37f295df70e63cff2d33c402589e407990bad|grep v_created
+git log protected/controllers/BossMvController.php
+git diff ddfb584b9e35028704cb29ac26943f74493c7068|grep v_created
+fg
+stat index.php 
+stat /home/apache-solr-3.6.2/movies/solr/conf/schema.xml 
+stat protected/controllers/BossMvController.php 
+fg
+stat protected/extensions/solr/SolrBase.php
+git log protected/extensions/solr/SolrBase.php 
+git show 04e79b553e8f4b824353bcaf7c5abf86b02e3579
+git log protected/extensions/solr/SolrBase.php 
+git show 2f4dc1b1b565a961cc455778d96fe2a8ac9e84d5
+git show 95c6c2da1e6c51e717ab97a1da430eedd2b524f0
+git diff HEAD^ HEAD
+git st
+git diff
+git log
+vim ../../.git/config 
+vim ~/.gitconfig 
+ls
+git st
+git diff
+git --help
+git log protected/controllers/BossMvController.php 
+git diff 8e933ffe2a802838c248a34b16246ebf477f66f9 HEAD |grep v_created
+git log protected/controllers/BossMvController.php 
+git diff 46401e1b327c7e656d551430a7dc2858a1fe128f HEAD |grep v_created
+fg
+logout
+ls
+vim /home/www/myvideos/
+cd /home/www/myvideos/
+ls
+cd Apps/
+ls
+cd MyVideo/
+ls
+vim protected/controllers/BossMvController.php 
+php -l protected/controllers/BossMvController.php
+fg
+git st
+git diff
+git log
+git ci -am 'remove exception message'
+fg
+date
+vi /etc/sysconfig/clock 
+grep chris_8603@hotmail.com  /data0/soft/s5server_443/s5user.cfg 
+date
+ grep -E '(vmx|svm)' /proc/cpuinfo
+rpm -aq|grep kvm
+yum -y install git
+git clone http://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+ll
+git clonet  https://git.kernel.org/pub/scm/virt/kvm/kvm.git
+git clone  https://git.kernel.org/pub/scm/virt/kvm/kvm.git
+wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.4.1.tar.gz
+ls
+cd /home/www/
+ls
+cd myvideos/Apps/MyVideo/
+ls
+vim index.php 
+git log
+git log protected/views/bossMv/_form.php 
+git log
+ls
+ll
+date
+fg
+git log protected/controllers/BossMvController.php 
+vim protected/controllers/BossMvController.php
+tail -f protected/runtime/application.log*
+fg
+git st
+git diff
+fg
+git ci -am 'fix add video bug'
+fg
+ll
+tar zxvf linux-3.4.1.tar.gz
+cd linux-3.4.1
+ll
+make help
+make  menuconfig 
+ll
+clear
+archey
+archey
+archey
+exit
+archey
+exit
+ls
+clear
+ls
+
+ls
+archey
+vim ~/.bash_profile 
+vim ~/.bashrc 
+vim ~/.bash_profile 
+vim ~/.bashrc 
+exit
+exit
+ls
+archey 
+ls
+exit

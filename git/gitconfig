@@ -1,0 +1,32 @@
+[user]
+	name = xi4oh4o
+	email = xi4oh4o@gmail.com
+[push]
+	default = matching
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	br = branch
+	unstage = reset HEAD --
+	last = log -1 HEAD
+  ; lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s - %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
+  lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	stash-unapply = !git stash show -p | git apply -R
+	pso = push origin dev
+	plo = pull origin dev
+[core]
+	excludesfile = /Users/xi4oh4o/.gitignore
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[mergetool]
+	keepBackup = true
+[http]
+	proxy = socks5://127.0.0.1:9129
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
