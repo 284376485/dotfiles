@@ -251,7 +251,7 @@ set t_Co=256
 set background=dark
 " colorscheme solarized
 " colorscheme molokai
-colorscheme default
+colorscheme Tomorrow-Night-Bright
 let g:molokai_original = 0
 let g:rehash256 = 1
 " colorscheme desert

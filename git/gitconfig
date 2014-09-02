@@ -16,7 +16,7 @@
 	pso = push origin dev
 	plo = pull origin dev
 [core]
-	excludesfile = /Users/xi4oh4o/.gitignore
+	excludesfile = /Users/xi4oh4o/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

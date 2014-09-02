@@ -53,6 +53,7 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
 " 代码匹配 PHPComplete "
 NeoBundle 'shawncplus/phpcomplete.vim'
 " 路径文件检索 Ctrlp "
