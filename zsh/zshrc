@@ -81,7 +81,7 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+export PATH="$/usr/local/Cellar/php56/5.6.0//bin:$PATH"
 alias gitsearch='git rev-list --all | xargs git grep -F'
 alias hs='history | grep --color=auto'
 alias site='cd /Users/xi4oh4o/Sites'
