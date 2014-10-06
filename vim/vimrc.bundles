@@ -154,6 +154,6 @@ NeoBundle 'tpope/vim-surround'
 " cs"', ds", ysiw), VS<p class"icon>
 " Unite 扩展
 NeoBundle 'Shougo/unite.vim'
-
+NeoBundle 'chankaward/vim-railscasts-theme'
 filetype plugin indent on
 NeoBundleCheck

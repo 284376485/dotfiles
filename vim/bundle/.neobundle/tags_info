@@ -25,6 +25,7 @@ vim-expand-region
 vim-javascript-syntax
 vim-l9
 vim-multiple-cursors
+vim-railscasts-theme
 vim-snipmate
 vim-snippets
 vim-surround

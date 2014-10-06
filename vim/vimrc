@@ -5,7 +5,7 @@
 filetype plugin on
 filetype indent on
 filetype on
-
+set re=1
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -251,8 +251,8 @@ set t_Co=256
 set background=dark
 " colorscheme solarized
 " colorscheme molokai
-" colorscheme Tomorrow-Night-Bright
-colorscheme desertEx
+colorscheme Tomorrow-Night-Bright
+" colorscheme desertEx
 let g:molokai_original = 0
 let g:rehash256 = 1
 " colorscheme desert
