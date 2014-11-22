@@ -1,10 +1,23 @@
+ " Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
 if has('vim_starting')
-    set nocompatible               " Be iMproved
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-    
-call neobundle#rc(expand('~/.vim/bundle/'))
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
+
+ " My Bundles here:
+ " Refer to |:NeoBundle-examples|.
+ " Note: You don't set neobundle setting in .gvimrc!
 
 " All Bundles "
 NeoBundle 'Shougo/vimproc'
@@ -59,9 +72,9 @@ NeoBundle 'shawncplus/phpcomplete.vim'
 " 路径文件检索 Ctrlp "
 NeoBundle 'kien/ctrlp.vim'
 " 代码高亮 CSS3 Syntax "
-NeoBundle 'hail2u/vim-css3-syntax'
+" NeoBundle 'hail2u/vim-css3-syntax'
 " 代码高亮 JavaScript "
-NeoBundle 'jelera/vim-javascript-syntax'
+" NeoBundle 'jelera/vim-javascript-syntax'
 " Rails "
 " NeoBundle 'tpope/vim-rails'
 " 代码片段 snipMate "
@@ -154,6 +167,7 @@ NeoBundle 'tpope/vim-surround'
 " cs"', ds", ysiw), VS<p class"icon>
 " Unite 扩展
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'chankaward/vim-railscasts-theme'
+
+call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck

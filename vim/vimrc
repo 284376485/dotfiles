@@ -56,6 +56,9 @@ set history=100
 " Enable incremental search
 set incsearch
 
+" Set ignorecase
+set ic
+
 " Enable nowrapscan search
 set nowrapscan
 

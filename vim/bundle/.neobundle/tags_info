@@ -18,14 +18,11 @@ vim-addon-mw-utils
 vim-airline
 vim-autocomplpop
 vim-colors-solarized
-vim-css3-syntax
 vim-easy-align
 vim-easymotion
 vim-expand-region
-vim-javascript-syntax
 vim-l9
 vim-multiple-cursors
-vim-railscasts-theme
 vim-snipmate
 vim-snippets
 vim-surround
