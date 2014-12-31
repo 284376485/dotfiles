@@ -164,7 +164,7 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")|execute("normal 
 let g:netrw_browse_split = 1
 
 " ctags plguns
-let g:ctags_regenerate = 0
+" let g:ctags_regenerate = 0
 
 "
 " MAPPINGS
@@ -200,10 +200,11 @@ nmap gf :new %:p:h/<cfile><CR>
 " map <Alt-p> and <Alt-P> to paste below/above and reformat
 nnoremap <Esc>P  P'[v']=
 nnoremap <Esc>p  p'[v']=
+nnoremap <leader>d :!dict <cword><CR>
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
 vnoremap > >gv
-
+vnoremap <leader>d y:!dict <c-r>"<CR>"
 " map cc cx comlents //
 "function! PHP_comments()
 "    :s/^/\/\//g
@@ -249,22 +250,23 @@ highlight treeUp cterm=none ctermfg=DarkYellow
 highlight treeCWD cterm=none ctermfg=DarkYellow
 highlight netrwDir cterm=none ctermfg=Cyan
 
-" Molokai Scheme
-set t_Co=256
+" set t_Co=256
+" set background=light
+" let g:molokai_original = 1
+" let g:rehash256 = 1
 " colorscheme solarized
 colorscheme molokai
 " colorscheme Tomorrow-Night-Bright
 " colorscheme desertEx
-" let g:molokai_original = 1
-" let g:rehash256 = 1
 " colorscheme desert
-set background=dark
+" colorscheme default
+" colorscheme flattown
 map fe :set fileencoding<CR>
 
 if has("autocmd")
 "   autocmd FileType python set complete+=k
     autocmd FileType php set complete-=k complete+=k
-    autocmd FileType php set dictionary=$HOME/.vim/dict/php.dict
+"   autocmd FileType php set dictionary=$HOME/.vim/dict/php.dict
     autocmd FileType php set omnifunc=phpcomplete#CompletePHP
     autocmd FileType php set filetype=php.laravel.yii
     autocmd FileType php set shiftwidth=4 tabstop=4 ai
