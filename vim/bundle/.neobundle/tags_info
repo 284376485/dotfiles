@@ -2,6 +2,7 @@ bufexplorer
 ctrlsf.vim
 delimitMate
 emmet-vim
+indentLine
 neobundle.vim
 phpcomplete.vim
 syntastic
