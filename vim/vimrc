@@ -259,9 +259,9 @@ highlight treeUp cterm=none ctermfg=DarkYellow
 highlight treeCWD cterm=none ctermfg=DarkYellow
 highlight netrwDir cterm=none ctermfg=Cyan
 
-" set t_Co=256
+set t_Co=256
 " set background=light
-" let g:molokai_original = 1
+let g:molokai_original = 1
 " let g:rehash256 = 1
 " colorscheme solarized
 colorscheme molokai

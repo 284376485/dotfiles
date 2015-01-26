@@ -30,11 +30,11 @@ NeoBundle 'Raimondi/delimitMate'
 " 代码补全 Emmet "
 NeoBundle 'mattn/emmet-vim'
 " 文件树导航 Nerdtree "
-" NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 " Increase window size to 35 columns
-" let NERDTreeWinSize=35
-" map <F7> to toggle NERDTree window
-" nmap <silent> <F7> :NERDTreeToggle<CR>
+let NERDTreeWinSize=35
+map <F7> to toggle NERDTree window
+nmap <silent> <F7> :NERDTreeToggle<CR>
 " 状态栏增强 PowerLine "
 " NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'bling/vim-airline'
@@ -78,10 +78,10 @@ NeoBundle 'shawncplus/phpcomplete.vim'
 " Rails "
 " NeoBundle 'tpope/vim-rails'
 " 代码片段 snipMate "
-" NeoBundle 'MarcWeber/vim-addon-mw-utils'
-" NeoBundle 'tomtom/tlib_vim'
-" NeoBundle 'garbas/vim-snipmate'
-" NeoBundle 'honza/vim-snippets'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'honza/vim-snippets'
 " 标签导航 Tagbar "
 " NeoBundle 'majutsushi/tagbar'
 " nmap <F8> :TagbarToggle<CR>
@@ -97,7 +97,7 @@ vnoremap <silent> <Enter> :EasyAlign<Enter>
 " 配色 flattown "
 " NeoBundle 'blerins/flattown'
 " 超级Tab SuperTab "
-" NeoBundle 'ervandew/supertab'
+NeoBundle 'ervandew/supertab'
 " 彩虹括号 Rainbow Parentheses "
 " NeoBundle 'kien/rainbow_parentheses.vim'
 " let g:rbpt_colorpairs = [

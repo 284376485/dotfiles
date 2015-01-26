@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/xi4oh4o/Sites/newmv/components/controller'
+let g:netrw_dirhist_2='/Users/xi4oh4o/Sites/newmv/components'
+let g:netrw_dirhist_3='/Users/xi4oh4o/Sites/newmv/vendor/elasticsearch/elasticsearch/src/Elasticsearch/Connections'
+let g:netrw_dirhist_4='/Users/xi4oh4o/Sites/newmv/modules/admin/views'
+let g:netrw_dirhist_5='/Users/xi4oh4o/Sites/newmv/controllers'
+let g:netrw_dirhist_6='/Users/xi4oh4o/Sites/newmv'
+let g:netrw_dirhist_7='/Users/xi4oh4o/Sites'
+let g:netrw_dirhist_8='/Users/xi4oh4o/Sites/newmv'
+let g:netrw_dirhist_9='/Users/xi4oh4o/Sites/newmv/controllers'

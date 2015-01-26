@@ -4,10 +4,14 @@ delimitMate
 emmet-vim
 indentLine
 neobundle.vim
+nerdtree
 phpcomplete.vim
+supertab
 syntastic
 tcomment_vim
+tlib_vim
 unite.vim
+vim-addon-mw-utils
 vim-airline
 vim-autocomplpop
 vim-easy-align
@@ -15,5 +19,7 @@ vim-easymotion
 vim-expand-region
 vim-l9
 vim-multiple-cursors
+vim-snipmate
+vim-snippets
 vim-surround
 vimproc
