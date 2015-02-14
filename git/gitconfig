@@ -17,6 +17,7 @@
 	plo = pull origin dev
 [core]
 	excludesfile = /Users/xi4oh4o/.gitignore
+	filemode = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
