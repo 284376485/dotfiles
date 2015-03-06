@@ -23,3 +23,7 @@ node_modules
 
 # Vim temp
 *.swp
+
+# Qiniu Keys
+qiniu_sdk.rb
+TrustedCommand.php

@@ -22,4 +22,5 @@ vim-multiple-cursors
 vim-snipmate
 vim-snippets
 vim-surround
+vim-wakatime
 vimproc
