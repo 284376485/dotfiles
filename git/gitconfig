@@ -26,8 +26,6 @@
 	trustExitCode = true
 [mergetool]
 	keepBackup = true
-[http]
-	proxy = socks5://127.0.0.1:9129
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
