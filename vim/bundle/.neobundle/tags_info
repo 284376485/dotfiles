@@ -9,7 +9,6 @@ indentLine
 neobundle.vim
 neocomplete.vim
 nerdtree
-phpcomplete.vim
 supertab
 syntastic
 tabular
@@ -23,7 +22,6 @@ vim-colors-solarized
 vim-easy-align
 vim-easymotion
 vim-expand-region
-vim-l9
 vim-multiple-cursors
 vim-ruby
 vim-snipmate

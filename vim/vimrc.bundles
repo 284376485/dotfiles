@@ -21,6 +21,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " All Bundles "
 NeoBundle 'Shougo/vimproc'
+
 " 自动补全 "
 NeoBundle 'Shougo/neocomplete.vim'
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
@@ -154,7 +155,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 " let g:airline_symbols.linenr = ''
 
 " 代码匹配 PHPComplete "
-NeoBundle 'shawncplus/phpcomplete.vim'
+" NeoBundle 'shawncplus/phpcomplete.vim'
 " 路径文件检索 Ctrlp "
 NeoBundle 'kien/ctrlp.vim'
 " 代码高亮 CSS3 Syntax "
@@ -185,7 +186,7 @@ NeoBundle 'blerins/flattown'
 NeoBundle 'wellsjo/wells-colorscheme.vim'
 " 超级Tab SuperTab "
 NeoBundle 'ervandew/supertab'
-let g:SuperTabRetainCompletionType = 1
+let g:SuperTabRetainCompletionType = 2
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 " 彩虹括号 Rainbow Parentheses "
 " NeoBundle 'kien/rainbow_parentheses.vim'
@@ -236,7 +237,7 @@ let g:syntastic_enable_balloons = 1
 autocmd BufNewFile,BufRead *.slim setf slim
 " 自动弹出 AutoComplPop "
 " NeoBundle 'othree/vim-autocomplpop'
-NeoBundle 'cfurrow/vim-l9'
+" NeoBundle 'cfurrow/vim-l9'
 " Slim template "
 " NeoBundle 'slim-template/vim-slim'
 " indentLine "
