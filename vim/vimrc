@@ -260,7 +260,7 @@ highlight treeCWD cterm=none ctermfg=DarkYellow
 highlight netrwDir cterm=none ctermfg=Cyan
 
 set t_Co=256
-" set background=light
+set background=dark
 " let g:molokai_original = 1
 let g:rehash256 = 1
 " colorscheme solarized
@@ -274,6 +274,7 @@ colorscheme desertEx
 map fe :set fileencoding<CR>
 
 if has("autocmd")
+    autocmd BufRead,BufNewFile *.scss set filetype=scss.css
 "   autocmd FileType python set complete+=k
     autocmd FileType php set complete-=k complete+=k
 "   autocmd FileType php set dictionary=$HOME/.vim/dict/php.dict
