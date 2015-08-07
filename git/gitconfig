@@ -4,7 +4,7 @@
 [push]
 	default = matching
 [alias]
-	ci = commit -a -v
+	ci = commit -v
 	st = status
 	co = checkout
 	br = branch
