@@ -50,7 +50,7 @@ NeoBundle 'Raimondi/delimitMate'
 " 代码补全 Emmet "
 NeoBundle 'mattn/emmet-vim'
 " 文件树导航 Nerdtree "
-NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'scrooloose/nerdtree'
 " Increase window size to 35 columns
 let NERDTreeWinSize=35
 map <F7> to toggle NERDTree window
@@ -177,10 +177,6 @@ NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'cfurrow/vim-l9'
 " Slim template "
 " NeoBundle 'slim-template/vim-slim'
-" indentLine "
-NeoBundle 'Yggdroot/indentLine'
-let g:indentLine_color_term = 239
-let g:indentLine_char = '¦'
 " CtrlSf "
 NeoBundle 'dyng/ctrlsf.vim'
 let g:ctrlsf_ackprg = 'ag'

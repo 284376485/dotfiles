@@ -6,7 +6,7 @@ filetype indent on
 filetype on
 set re=1
 if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+   source ~/.vimrc.bundles
 endif
 
 if filereadable(expand("~/.vimrc.plug"))
