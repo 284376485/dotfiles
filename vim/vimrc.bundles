@@ -21,6 +21,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " All Bundles "
 NeoBundle 'Shougo/vimproc'
+
 " 自动补全 "
 NeoBundle 'Valloric/YouCompleteMe'
 "youcompleteme 默认tab s-tab 和自动补全冲突
@@ -41,20 +42,26 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py" 
 "直接触发自动补全
 let g:ycm_key_invoke_completion = '<C-Space>'
+
 " 语法支持 HTML5 "
 " NeoBundle 'othree/html5.vim'
+
 " Ruby "
 " NeoBundle 'vim-ruby/vim-ruby'
+
 " 标签闭合 delimitMate  "
 NeoBundle 'Raimondi/delimitMate'
+
 " 代码补全 Emmet "
 NeoBundle 'mattn/emmet-vim'
+
 " 文件树导航 Nerdtree "
-" NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 " Increase window size to 35 columns
 let NERDTreeWinSize=35
 map <F7> to toggle NERDTree window
 nmap <silent> <F7> :NERDTreeToggle<CR>
+
 " 状态栏增强 PowerLine "
 " NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'bling/vim-airline'
@@ -77,52 +84,57 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-"
-" powerline symbols
-" let g:airline_left_sep = ''
-" let g:airline_left_alt_sep = ''
-" let g:airline_right_sep = ''
-" let g:airline_right_alt_sep = ''
-" let g:airline_symbols.branch = ''
-" let g:airline_symbols.readonly = ''
-" let g:airline_symbols.linenr = ''
 
 " 代码匹配 PHPComplete "
 " NeoBundle 'shawncplus/phpcomplete.vim'
+
 " 路径文件检索 Ctrlp "
 NeoBundle 'kien/ctrlp.vim'
+
 " 代码高亮 CSS3 Syntax "
 " NeoBundle 'hail2u/vim-css3-syntax'
+
 " 代码高亮 JavaScript "
 " NeoBundle 'jelera/vim-javascript-syntax'
+
 " SCSS "
 NeoBundle 'cakebaker/scss-syntax.vim'
+
 " Rails "
 " NeoBundle 'tpope/vim-rails'
+
 " 代码片段 snipMate "
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets'
+
 " 标签导航 Tagbar "
 " NeoBundle 'majutsushi/tagbar'
 " nmap <F8> :TagbarToggle<CR>
+
 " 代码对齐 Tabular "
 NeoBundle 'godlygeek/tabular'
+
 " 代码注释 tcomment "
 NeoBundle 'tomtom/tcomment_vim'
+
 " 简单对齐 Vim easy Align "
 NeoBundle 'junegunn/vim-easy-align'
 vnoremap <silent> <Enter> :EasyAlign<Enter>
+
 " 配色 Solarized "
 NeoBundle 'altercation/vim-colors-solarized'
+
 " 配色 flattown "
 NeoBundle 'blerins/flattown'
 NeoBundle 'wellsjo/wells-colorscheme.vim'
+
 " 超级Tab SuperTab "
 NeoBundle 'ervandew/supertab'
 let g:SuperTabRetainCompletionType = 1
 let g:SuperTabDefaultCompletionType = "<C-X><C-N>"
+
 " 彩虹括号 Rainbow Parentheses "
 " NeoBundle 'kien/rainbow_parentheses.vim'
 " let g:rbpt_colorpairs = [
@@ -149,20 +161,26 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-N>"
 " au Syntax * RainbowParenthesesLoadRound
 " au Syntax * RainbowParenthesesLoadSquare
 " au Syntax * RainbowParenthesesLoadBraces
+
 " 简单跳转 EasyMotion "
 NeoBundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key = '<Leader>' " \\ +w 跳转 \\ + fe 查找e
+
 " 快速选中 Expand region "
 NeoBundle 'terryma/vim-expand-region'
 map K <Plug>(expand_region_expand)
 map J <Plug>(expand_region_shrink)
+
 " 多重选择 "
 NeoBundle 'terryma/vim-multiple-cursors'
 " c-n c-p c-x s or c 删除"
+
 " Laravel Blade Syntax "
 " NeoBundle 'xsbeats/vim-blade'
+
 " Twig Template "
 " NeoBundle 'evidens/vim-twig'
+
 " 语法检查 Syntastic "
 NeoBundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open = 1
@@ -172,11 +190,14 @@ let g:syntastic_warning_symbol = '⚠'
 "whether to show balloons
 let g:syntastic_enable_balloons = 1
 autocmd BufNewFile,BufRead *.slim setf slim
+
 " 自动弹出 AutoComplPop "
 NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'cfurrow/vim-l9'
+
 " Slim template "
 " NeoBundle 'slim-template/vim-slim'
+
 " CtrlSf "
 NeoBundle 'dyng/ctrlsf.vim'
 let g:ctrlsf_ackprg = 'ag'
@@ -187,15 +208,23 @@ nmap <F3> <ESC>:CtrlSF <c-r><c-w><CR>
 nmap <C-F3> <ESC>:CtrlSFOpen<CR>
 " BufExplorer
 NeoBundle 'jlanzarotta/bufexplorer'
+
 " Surround 外围符号
 NeoBundle 'tpope/vim-surround'
 " cs"', ds", ysiw), VS<p class"icon>
+
 " Unite 扩展
 NeoBundle 'Shougo/unite.vim'
+
 " WakaTime 统计编码时间
 NeoBundle 'wakatime/vim-wakatime'
+
 " Scala Syntax
 " NeoBundle 'derekwyatt/vim-scala'
+
+" 缩进线
+NeoBundle 'Yggdroot/indentLine'
+let g:indentLine_faster = 1
 
 call neobundle#end()
 filetype plugin indent on

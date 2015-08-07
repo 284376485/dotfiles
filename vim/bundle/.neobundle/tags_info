@@ -5,7 +5,9 @@ ctrlsf.vim
 delimitMate
 emmet-vim
 flattown
+indentLine
 neobundle.vim
+nerdtree
 scss-syntax.vim
 supertab
 syntastic
