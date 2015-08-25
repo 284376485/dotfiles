@@ -130,6 +130,9 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'blerins/flattown'
 NeoBundle 'wellsjo/wells-colorscheme.vim'
 
+" 配色 PaperColor "
+NeoBundle 'NLKNguyen/papercolor-theme'
+
 " 超级Tab SuperTab "
 NeoBundle 'ervandew/supertab'
 let g:SuperTabRetainCompletionType = 1

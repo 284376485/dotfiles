@@ -8,6 +8,7 @@ flattown
 indentLine
 neobundle.vim
 nerdtree
+papercolor-theme
 scss-syntax.vim
 supertab
 syntastic

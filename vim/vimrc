@@ -20,6 +20,9 @@ syntax on
 " GLOBAL SETTINGS
 "
 
+" Enable indent
+" set foldmethod=indent
+
 " show line number
 set number
 
@@ -263,10 +266,11 @@ set t_Co=256
 set background=dark
 " let g:molokai_original = 1
 let g:rehash256 = 1
+colorscheme PaperColor
 " colorscheme solarized
 " colorscheme molokai
 " colorscheme Tomorrow-Night-Bright
-colorscheme desertEx
+" colorscheme desertEx
 " colorscheme desert
 " colorscheme default
 " colorscheme flattown
