@@ -229,6 +229,22 @@ NeoBundle 'wakatime/vim-wakatime'
 NeoBundle 'Yggdroot/indentLine'
 let g:indentLine_faster = 1
 
+" Vdebug
+NeoBundle 'joonty/vdebug'
+let g:vdebug_options= {
+\    "port" : 9001,
+\    "server" : 'localhost',
+\    "timeout" : 20,
+\    "on_close" : 'detach',
+\    "break_on_open" : 1,
+\    "ide_key" : '',
+\    "remote_path" : "",
+\    "local_path" : "",
+\    "debug_window_level" : 0,
+\    "debug_file_level" : 0,
+\    "debug_file" : "",
+\}
+
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
