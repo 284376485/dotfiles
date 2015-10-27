@@ -264,7 +264,7 @@ highlight netrwDir cterm=none ctermfg=Cyan
 
 set t_Co=256
 set background=dark
-" let g:molokai_original = 1
+let g:molokai_original = 1
 let g:rehash256 = 1
 colorscheme PaperColor
 " colorscheme solarized
@@ -275,6 +275,8 @@ colorscheme PaperColor
 " colorscheme default
 " colorscheme flattown
 " colorscheme beekai
+" colorscheme material-theme
+
 map fe :set fileencoding<CR>
 
 if has("autocmd")

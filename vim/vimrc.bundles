@@ -78,7 +78,7 @@ let g:airline_right_sep = '«'
 let g:airline_right_sep = ''
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
@@ -132,6 +132,9 @@ NeoBundle 'wellsjo/wells-colorscheme.vim'
 
 " 配色 PaperColor "
 NeoBundle 'NLKNguyen/papercolor-theme'
+
+" 配色 Material "
+NeoBundle 'jdkanani/vim-material-theme'
 
 " 超级Tab SuperTab "
 NeoBundle 'ervandew/supertab'

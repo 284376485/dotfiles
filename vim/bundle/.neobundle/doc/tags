@@ -115,6 +115,7 @@
 'g:ctrlsf_default_root'	ctrlsf.txt	/*'g:ctrlsf_default_root'*
 'g:ctrlsf_indent'	ctrlsf.txt	/*'g:ctrlsf_indent'*
 'g:ctrlsf_mapping'	ctrlsf.txt	/*'g:ctrlsf_mapping'*
+'g:ctrlsf_populate_qflist'	ctrlsf.txt	/*'g:ctrlsf_populate_qflist'*
 'g:ctrlsf_position'	ctrlsf.txt	/*'g:ctrlsf_position'*
 'g:ctrlsf_regex_pattern'	ctrlsf.txt	/*'g:ctrlsf_regex_pattern'*
 'g:ctrlsf_selected_line_hl'	ctrlsf.txt	/*'g:ctrlsf_selected_line_hl'*
@@ -279,6 +280,7 @@
 :UniteWithInput	unite.txt	/*:UniteWithInput*
 :UniteWithInputDirectory	unite.txt	/*:UniteWithInputDirectory*
 :UniteWithProjectDir	unite.txt	/*:UniteWithProjectDir*
+:VdebugEval!	Vdebug.txt	/*:VdebugEval!*
 :VimProcBang	vimproc.txt	/*:VimProcBang*
 :VimProcInstall	vimproc.txt	/*:VimProcInstall*
 :VimProcRead	vimproc.txt	/*:VimProcRead*
@@ -463,7 +465,9 @@ EasyMotion_space_jump_first	easymotion.txt	/*EasyMotion_space_jump_first*
 EasyMotion_use_migemo	easymotion.txt	/*EasyMotion_use_migemo*
 EasyMotion_use_upper	easymotion.txt	/*EasyMotion_use_upper*
 Emmet	emmet.txt	/*Emmet*
+FixIt	youcompleteme.txt	/*FixIt*
 GLIBC_2.XX-not-found()	youcompleteme.txt	/*GLIBC_2.XX-not-found()*
+GetDoc	youcompleteme.txt	/*GetDoc*
 GetParent	youcompleteme.txt	/*GetParent*
 GetType	youcompleteme.txt	/*GetType*
 GoTo	youcompleteme.txt	/*GoTo*
@@ -472,6 +476,7 @@ GoToDefinition	youcompleteme.txt	/*GoToDefinition*
 GoToImplementation	youcompleteme.txt	/*GoToImplementation*
 GoToImplementationElseDeclaration	youcompleteme.txt	/*GoToImplementationElseDeclaration*
 GoToImprecise	youcompleteme.txt	/*GoToImprecise*
+GoToInclude	youcompleteme.txt	/*GoToInclude*
 IndentLinesDisable	indentLine.txt	/*IndentLinesDisable*
 IndentLinesEnable	indentLine.txt	/*IndentLinesEnable*
 IndentLinesReset	indentLine.txt	/*IndentLinesReset*
@@ -571,6 +576,7 @@ SnipMate-syntax	SnipMate.txt	/*SnipMate-syntax*
 SnipMate-tabstops	SnipMate.txt	/*SnipMate-tabstops*
 SnipMate-usage	SnipMate.txt	/*SnipMate-usage*
 SnipMate-visual	SnipMate.txt	/*SnipMate-visual*
+SnipMate-zero-tabstop	SnipMate.txt	/*SnipMate-zero-tabstop*
 SnipMate.txt	SnipMate.txt	/*SnipMate.txt*
 StartServer	youcompleteme.txt	/*StartServer*
 StopServer	youcompleteme.txt	/*StopServer*
@@ -714,6 +720,7 @@ airline-troubleshooting	airline.txt	/*airline-troubleshooting*
 airline-virtualenv	airline.txt	/*airline-virtualenv*
 airline-whitespace	airline.txt	/*airline-whitespace*
 airline-windowswap	airline.txt	/*airline-windowswap*
+airline-wordcount	airline.txt	/*airline-wordcount*
 airline-writing-extensions	airline.txt	/*airline-writing-extensions*
 airline.txt	airline.txt	/*airline.txt*
 autocomplpop	acp.txt	/*autocomplpop*
@@ -896,7 +903,7 @@ easymotion-more-mappings	easymotion.txt	/*easymotion-more-mappings*
 easymotion-multi-input	easymotion.txt	/*easymotion-multi-input*
 easymotion-plug-table	easymotion.txt	/*easymotion-plug-table*
 easymotion-requirements	easymotion.txt	/*easymotion-requirements*
-easymotion-textobjct	easymotion.txt	/*easymotion-textobjct*
+easymotion-textobject	easymotion.txt	/*easymotion-textobject*
 easymotion-two-key	easymotion.txt	/*easymotion-two-key*
 easymotion-usage	easymotion.txt	/*easymotion-usage*
 easymotion-within-line	easymotion.txt	/*easymotion-within-line*
@@ -1188,6 +1195,11 @@ g:tlib#cache#script_encoding	tlib.txt	/*g:tlib#cache#script_encoding*
 g:tlib#cache#verbosity	tlib.txt	/*g:tlib#cache#verbosity*
 g:tlib#debug	tlib.txt	/*g:tlib#debug*
 g:tlib#dir#sep	tlib.txt	/*g:tlib#dir#sep*
+g:tlib#file#absolute_filename_rx	tlib.txt	/*g:tlib#file#absolute_filename_rx*
+g:tlib#file#drop	tlib.txt	/*g:tlib#file#drop*
+g:tlib#file#edit_cmds	tlib.txt	/*g:tlib#file#edit_cmds*
+g:tlib#file#fs_enc	tlib.txt	/*g:tlib#file#fs_enc*
+g:tlib#file#use_tabs	tlib.txt	/*g:tlib#file#use_tabs*
 g:tlib#hash#use_adler32	tlib.txt	/*g:tlib#hash#use_adler32*
 g:tlib#hash#use_crc32	tlib.txt	/*g:tlib#hash#use_crc32*
 g:tlib#input#and	tlib.txt	/*g:tlib#input#and*
@@ -1211,6 +1223,10 @@ g:tlib#sys#check_cygpath	tlib.txt	/*g:tlib#sys#check_cygpath*
 g:tlib#sys#cygwin_expr	tlib.txt	/*g:tlib#sys#cygwin_expr*
 g:tlib#sys#cygwin_path_rx	tlib.txt	/*g:tlib#sys#cygwin_path_rx*
 g:tlib#sys#null	tlib.txt	/*g:tlib#sys#null*
+g:tlib#sys#special_protocols	tlib.txt	/*g:tlib#sys#special_protocols*
+g:tlib#sys#special_suffixes	tlib.txt	/*g:tlib#sys#special_suffixes*
+g:tlib#sys#system_browser	tlib.txt	/*g:tlib#sys#system_browser*
+g:tlib#sys#system_rx	tlib.txt	/*g:tlib#sys#system_rx*
 g:tlib#sys#windows	tlib.txt	/*g:tlib#sys#windows*
 g:tlib#vcs#check	tlib.txt	/*g:tlib#vcs#check*
 g:tlib#vcs#def	tlib.txt	/*g:tlib#vcs#def*
@@ -1265,7 +1281,7 @@ g:unite_source_grep_default_opts	unite.txt	/*g:unite_source_grep_default_opts*
 g:unite_source_grep_encoding	unite.txt	/*g:unite_source_grep_encoding*
 g:unite_source_grep_recursive_opt	unite.txt	/*g:unite_source_grep_recursive_opt*
 g:unite_source_grep_search_word_highlight	unite.txt	/*g:unite_source_grep_search_word_highlight*
-g:unite_source_history_save_clipboard	unite.txt	/*g:unite_source_history_save_clipboard*
+g:unite_source_history_save_registers	unite.txt	/*g:unite_source_history_save_registers*
 g:unite_source_history_yank_enable	unite.txt	/*g:unite_source_history_yank_enable*
 g:unite_source_history_yank_file	unite.txt	/*g:unite_source_history_yank_file*
 g:unite_source_history_yank_limit	unite.txt	/*g:unite_source_history_yank_limit*
@@ -1311,6 +1327,7 @@ g:ycm_collect_identifiers_from_tags_files	youcompleteme.txt	/*g:ycm_collect_iden
 g:ycm_complete_in_comments	youcompleteme.txt	/*g:ycm_complete_in_comments*
 g:ycm_complete_in_strings	youcompleteme.txt	/*g:ycm_complete_in_strings*
 g:ycm_confirm_extra_conf	youcompleteme.txt	/*g:ycm_confirm_extra_conf*
+g:ycm_csharp_insert_namespace_expr	youcompleteme.txt	/*g:ycm_csharp_insert_namespace_expr*
 g:ycm_csharp_server_port	youcompleteme.txt	/*g:ycm_csharp_server_port*
 g:ycm_disable_for_files_larger_than_kb	youcompleteme.txt	/*g:ycm_disable_for_files_larger_than_kb*
 g:ycm_echo_current_diagnostic	youcompleteme.txt	/*g:ycm_echo_current_diagnostic*
@@ -1357,7 +1374,6 @@ i_<Plug>(unite_move_head)	unite.txt	/*i_<Plug>(unite_move_head)*
 i_<Plug>(unite_move_left)	unite.txt	/*i_<Plug>(unite_move_left)*
 i_<Plug>(unite_move_right)	unite.txt	/*i_<Plug>(unite_move_right)*
 i_<Plug>(unite_narrowing_input_history)	unite.txt	/*i_<Plug>(unite_narrowing_input_history)*
-i_<Plug>(unite_narrowing_path)	unite.txt	/*i_<Plug>(unite_narrowing_path)*
 i_<Plug>(unite_new_candidate)	unite.txt	/*i_<Plug>(unite_new_candidate)*
 i_<Plug>(unite_print_candidate)	unite.txt	/*i_<Plug>(unite_print_candidate)*
 i_<Plug>(unite_print_message_log)	unite.txt	/*i_<Plug>(unite_print_message_log)*
@@ -1461,6 +1477,7 @@ neobundle-options-depends	neobundle.txt	/*neobundle-options-depends*
 neobundle-options-directory	neobundle.txt	/*neobundle-options-directory*
 neobundle-options-disabled	neobundle.txt	/*neobundle-options-disabled*
 neobundle-options-external_commands	neobundle.txt	/*neobundle-options-external_commands*
+neobundle-options-fetch	neobundle.txt	/*neobundle-options-fetch*
 neobundle-options-focus	neobundle.txt	/*neobundle-options-focus*
 neobundle-options-force	neobundle.txt	/*neobundle-options-force*
 neobundle-options-gui	neobundle.txt	/*neobundle-options-gui*
@@ -1471,7 +1488,6 @@ neobundle-options-name	neobundle.txt	/*neobundle-options-name*
 neobundle-options-overwrite	neobundle.txt	/*neobundle-options-overwrite*
 neobundle-options-recipe	neobundle.txt	/*neobundle-options-recipe*
 neobundle-options-regular_name	neobundle.txt	/*neobundle-options-regular_name*
-neobundle-options-resettable	neobundle.txt	/*neobundle-options-resettable*
 neobundle-options-rtp	neobundle.txt	/*neobundle-options-rtp*
 neobundle-options-script_type	neobundle.txt	/*neobundle-options-script_type*
 neobundle-options-site	neobundle.txt	/*neobundle-options-site*
@@ -1722,6 +1738,7 @@ tlib#comments#Comments()	tlib.txt	/*tlib#comments#Comments()*
 tlib#date#DiffInDays()	tlib.txt	/*tlib#date#DiffInDays()*
 tlib#date#Parse()	tlib.txt	/*tlib#date#Parse()*
 tlib#date#SecondsSince1970()	tlib.txt	/*tlib#date#SecondsSince1970()*
+tlib#dictionary#Rev()	tlib.txt	/*tlib#dictionary#Rev()*
 tlib#dir#CD()	tlib.txt	/*tlib#dir#CD()*
 tlib#dir#CanonicName()	tlib.txt	/*tlib#dir#CanonicName()*
 tlib#dir#Ensure()	tlib.txt	/*tlib#dir#Ensure()*
@@ -1733,10 +1750,16 @@ tlib#dir#Push()	tlib.txt	/*tlib#dir#Push()*
 tlib#eval#FormatValue()	tlib.txt	/*tlib#eval#FormatValue()*
 tlib#file#Absolute()	tlib.txt	/*tlib#file#Absolute()*
 tlib#file#Canonic()	tlib.txt	/*tlib#file#Canonic()*
+tlib#file#Edit()	tlib.txt	/*tlib#file#Edit()*
+tlib#file#FileReadable()	tlib.txt	/*tlib#file#FileReadable()*
+tlib#file#FsEncoding()	tlib.txt	/*tlib#file#FsEncoding()*
+tlib#file#IsDirectory()	tlib.txt	/*tlib#file#IsDirectory()*
 tlib#file#Join()	tlib.txt	/*tlib#file#Join()*
+tlib#file#NativeFilename()	tlib.txt	/*tlib#file#NativeFilename()*
 tlib#file#Relative()	tlib.txt	/*tlib#file#Relative()*
 tlib#file#Split()	tlib.txt	/*tlib#file#Split()*
 tlib#file#With()	tlib.txt	/*tlib#file#With()*
+tlib#file#WithNative()	tlib.txt	/*tlib#file#WithNative()*
 tlib#fixes#Winpos()	tlib.txt	/*tlib#fixes#Winpos()*
 tlib#grep#Do()	tlib.txt	/*tlib#grep#Do()*
 tlib#grep#List()	tlib.txt	/*tlib#grep#List()*
@@ -1785,6 +1808,7 @@ tlib#persistent#Value()	tlib.txt	/*tlib#persistent#Value()*
 tlib#progressbar#Display()	tlib.txt	/*tlib#progressbar#Display()*
 tlib#progressbar#Init()	tlib.txt	/*tlib#progressbar#Init()*
 tlib#progressbar#Restore()	tlib.txt	/*tlib#progressbar#Restore()*
+tlib#rx#Convert()	tlib.txt	/*tlib#rx#Convert()*
 tlib#rx#Escape()	tlib.txt	/*tlib#rx#Escape()*
 tlib#rx#EscapeReplace()	tlib.txt	/*tlib#rx#EscapeReplace()*
 tlib#rx#Suffixes()	tlib.txt	/*tlib#rx#Suffixes()*
@@ -1808,7 +1832,9 @@ tlib#sys#FileArgs()	tlib.txt	/*tlib#sys#FileArgs()*
 tlib#sys#GetCmd()	tlib.txt	/*tlib#sys#GetCmd()*
 tlib#sys#IsCygwinBin()	tlib.txt	/*tlib#sys#IsCygwinBin()*
 tlib#sys#IsExecutable()	tlib.txt	/*tlib#sys#IsExecutable()*
+tlib#sys#IsSpecial()	tlib.txt	/*tlib#sys#IsSpecial()*
 tlib#sys#MaybeUseCygpath()	tlib.txt	/*tlib#sys#MaybeUseCygpath()*
+tlib#sys#Open()	tlib.txt	/*tlib#sys#Open()*
 tlib#tab#BufMap()	tlib.txt	/*tlib#tab#BufMap()*
 tlib#tab#Set()	tlib.txt	/*tlib#tab#Set()*
 tlib#tab#TabWinNr()	tlib.txt	/*tlib#tab#TabWinNr()*
@@ -1935,6 +1961,7 @@ unite-filter-attribute-filter	unite.txt	/*unite-filter-attribute-filter*
 unite-filter-attribute-name	unite.txt	/*unite-filter-attribute-name*
 unite-filter-attribute-pattern	unite.txt	/*unite-filter-attribute-pattern*
 unite-filter-attributes	unite.txt	/*unite-filter-attributes*
+unite-filter-converter_abbr_word	unite.txt	/*unite-filter-converter_abbr_word*
 unite-filter-converter_default	unite.txt	/*unite-filter-converter_default*
 unite-filter-converter_file_directory	unite.txt	/*unite-filter-converter_file_directory*
 unite-filter-converter_full_path	unite.txt	/*unite-filter-converter_full_path*
@@ -1960,6 +1987,7 @@ unite-filter-sorter_length	unite.txt	/*unite-filter-sorter_length*
 unite-filter-sorter_nothing	unite.txt	/*unite-filter-sorter_nothing*
 unite-filter-sorter_rank	unite.txt	/*unite-filter-sorter_rank*
 unite-filter-sorter_reverse	unite.txt	/*unite-filter-sorter_reverse*
+unite-filter-sorter_selecta	unite.txt	/*unite-filter-sorter_selecta*
 unite-filter-sorter_word	unite.txt	/*unite-filter-sorter_word*
 unite-filter-variables	unite.txt	/*unite-filter-variables*
 unite-filters	unite.txt	/*unite-filters*
@@ -2043,6 +2071,7 @@ unite-options-previewheight	unite.txt	/*unite-options-previewheight*
 unite-options-profile-name	unite.txt	/*unite-options-profile-name*
 unite-options-prompt	unite.txt	/*unite-options-prompt*
 unite-options-prompt-direction	unite.txt	/*unite-options-prompt-direction*
+unite-options-prompt-focus	unite.txt	/*unite-options-prompt-focus*
 unite-options-prompt-visible	unite.txt	/*unite-options-prompt-visible*
 unite-options-quick-match	unite.txt	/*unite-options-quick-match*
 unite-options-resume	unite.txt	/*unite-options-resume*
@@ -2086,7 +2115,6 @@ unite-source-attribute-hooks-on_post_filter	unite.txt	/*unite-source-attribute-h
 unite-source-attribute-hooks-on_pre_filter	unite.txt	/*unite-source-attribute-hooks-on_pre_filter*
 unite-source-attribute-hooks-on_pre_init	unite.txt	/*unite-source-attribute-hooks-on_pre_init*
 unite-source-attribute-hooks-on_syntax	unite.txt	/*unite-source-attribute-hooks-on_syntax*
-unite-source-attribute-is_grouped	unite.txt	/*unite-source-attribute-is_grouped*
 unite-source-attribute-is_listed	unite.txt	/*unite-source-attribute-is_listed*
 unite-source-attribute-is_volatile	unite.txt	/*unite-source-attribute-is_volatile*
 unite-source-attribute-matchers	unite.txt	/*unite-source-attribute-matchers*
@@ -2210,7 +2238,9 @@ x_<Plug>TComment_gc	tcomment.txt	/*x_<Plug>TComment_gc*
 yS	surround.txt	/*yS*
 ySS	surround.txt	/*ySS*
 youcompleteme	youcompleteme.txt	/*youcompleteme*
+youcompleteme-c	youcompleteme.txt	/*youcompleteme-c*
 youcompleteme-c-diagnostic-support	youcompleteme.txt	/*youcompleteme-c-diagnostic-support*
+youcompleteme-c-family-languages	youcompleteme.txt	/*youcompleteme-c-family-languages*
 youcompleteme-c-family-semantic-completion-engine-usage	youcompleteme.txt	/*youcompleteme-c-family-semantic-completion-engine-usage*
 youcompleteme-client-server-architecture	youcompleteme.txt	/*youcompleteme-client-server-architecture*
 youcompleteme-commands	youcompleteme.txt	/*youcompleteme-commands*
@@ -2222,14 +2252,16 @@ youcompleteme-diagnostic-highlighting-groups	youcompleteme.txt	/*youcompleteme-d
 youcompleteme-faq	youcompleteme.txt	/*youcompleteme-faq*
 youcompleteme-freebsd-openbsd-installation	youcompleteme.txt	/*youcompleteme-freebsd-openbsd-installation*
 youcompleteme-full-installation-guide	youcompleteme.txt	/*youcompleteme-full-installation-guide*
+youcompleteme-general	youcompleteme.txt	/*youcompleteme-general*
 youcompleteme-general-semantic-completion-engine-usage	youcompleteme.txt	/*youcompleteme-general-semantic-completion-engine-usage*
 youcompleteme-general-usage	youcompleteme.txt	/*youcompleteme-general-usage*
+youcompleteme-go	youcompleteme.txt	/*youcompleteme-go*
 youcompleteme-i-get-an-internal-compiler-error-when-installing	youcompleteme.txt	/*youcompleteme-i-get-an-internal-compiler-error-when-installing*
 youcompleteme-i-get-annoying-messages-in-vims-status-area-when-i-type	youcompleteme.txt	/*youcompleteme-i-get-annoying-messages-in-vims-status-area-when-i-type*
 youcompleteme-i-get-weird-window-at-top-of-my-file-when-i-use-semantic-engine	youcompleteme.txt	/*youcompleteme-i-get-weird-window-at-top-of-my-file-when-i-use-semantic-engine*
 youcompleteme-i-have-homebrew-python-and-or-macvim-cant-compile-sigabrt-when-starting	youcompleteme.txt	/*youcompleteme-i-have-homebrew-python-and-or-macvim-cant-compile-sigabrt-when-starting*
 youcompleteme-im-trying-to-use-homebrew-vim-with-ycm-im-getting-segfaults	youcompleteme.txt	/*youcompleteme-im-trying-to-use-homebrew-vim-with-ycm-im-getting-segfaults*
-youcompleteme-install-ycm-with-neobundle-36	youcompleteme.txt	/*youcompleteme-install-ycm-with-neobundle-36*
+youcompleteme-install-ycm-with-neobundle-43	youcompleteme.txt	/*youcompleteme-install-ycm-with-neobundle-43*
 youcompleteme-installation	youcompleteme.txt	/*youcompleteme-installation*
 youcompleteme-intro	youcompleteme.txt	/*youcompleteme-intro*
 youcompleteme-introduction	youcompleteme.txt	/*youcompleteme-introduction*
@@ -2239,10 +2271,12 @@ youcompleteme-license	youcompleteme.txt	/*youcompleteme-license*
 youcompleteme-mac-os-x-super-quick-installation	youcompleteme.txt	/*youcompleteme-mac-os-x-super-quick-installation*
 youcompleteme-on-very-rare-occasions-vim-crashes-when-i-tab-through-completion-menu	youcompleteme.txt	/*youcompleteme-on-very-rare-occasions-vim-crashes-when-i-tab-through-completion-menu*
 youcompleteme-options	youcompleteme.txt	/*youcompleteme-options*
-youcompleteme-project-management	youcompleteme.txt	/*youcompleteme-project-management*
+youcompleteme-python-2	youcompleteme.txt	/*youcompleteme-python-2*
+youcompleteme-quick-feature-summary	youcompleteme.txt	/*youcompleteme-quick-feature-summary*
 youcompleteme-references	youcompleteme.txt	/*youcompleteme-references*
 youcompleteme-semantic-completion-for-other-languages	youcompleteme.txt	/*youcompleteme-semantic-completion-for-other-languages*
 youcompleteme-sometimes-it-takes-much-longer-to-get-semantic-completions-than-normal	youcompleteme.txt	/*youcompleteme-sometimes-it-takes-much-longer-to-get-semantic-completions-than-normal*
+youcompleteme-typescript	youcompleteme.txt	/*youcompleteme-typescript*
 youcompleteme-ubuntu-linux-x64-super-quick-installation	youcompleteme.txt	/*youcompleteme-ubuntu-linux-x64-super-quick-installation*
 youcompleteme-user-guide	youcompleteme.txt	/*youcompleteme-user-guide*
 youcompleteme-vim-segfaults-when-i-use-semantic-completer-in-ruby-files	youcompleteme.txt	/*youcompleteme-vim-segfaults-when-i-use-semantic-completer-in-ruby-files*
