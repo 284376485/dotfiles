@@ -9,14 +9,12 @@ indentLine
 neobundle.vim
 nerdtree
 papercolor-theme
-scss-syntax.vim
 supertab
 syntastic
 tabular
 tcomment_vim
 tlib_vim
 unite.vim
-vdebug
 vim-addon-mw-utils
 vim-airline
 vim-autocomplpop

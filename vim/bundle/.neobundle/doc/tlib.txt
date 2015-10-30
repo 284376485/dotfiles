@@ -30,14 +30,12 @@ installed.
 ========================================================================
 Contents~
 
-        :TRequire .............................. |:TRequire|
         :TLet .................................. |:TLet|
         :TScratch .............................. |:TScratch|
         :TVarArg ............................... |:TVarArg|
-        :TKeyArg ............................... |:TKeyArg|
         :TBrowseOutput ......................... |:TBrowseOutput|
         :TBrowseScriptnames .................... |:TBrowseScriptnames|
-        :TTimeCommand .......................... |:TTimeCommand|
+        :TLibTrace ............................. |:TLibTrace|
         Add .................................... |Add()|
         TestGetArg ............................. |TestGetArg()|
         TestGetArg1 ............................ |TestGetArg1()|
@@ -67,6 +65,7 @@ Contents~
         tlib#progressbar#Display ............... |tlib#progressbar#Display()|
         tlib#progressbar#Restore ............... |tlib#progressbar#Restore()|
         tlib#eval#FormatValue .................. |tlib#eval#FormatValue()|
+        tlib#eval#Extend ....................... |tlib#eval#Extend()|
         tlib#list#Inject ....................... |tlib#list#Inject()|
         tlib#list#Compact ...................... |tlib#list#Compact()|
         tlib#list#Flatten ...................... |tlib#list#Flatten()|
@@ -84,6 +83,7 @@ Contents~
         tlib#cmd#BrowseOutputWithCallback ...... |tlib#cmd#BrowseOutputWithCallback()|
         tlib#cmd#DefaultBrowseOutput ........... |tlib#cmd#DefaultBrowseOutput()|
         tlib#cmd#ParseScriptname ............... |tlib#cmd#ParseScriptname()|
+        tlib#cmd#TBrowseScriptnames ............ |tlib#cmd#TBrowseScriptnames()|
         tlib#cmd#UseVertical ................... |tlib#cmd#UseVertical()|
         tlib#cmd#Time .......................... |tlib#cmd#Time()|
         tlib#cmd#Capture ....................... |tlib#cmd#Capture()|
@@ -188,6 +188,7 @@ Contents~
         tlib#agent#Null ........................ |tlib#agent#Null()|
         tlib#agent#ExecAgentByName ............. |tlib#agent#ExecAgentByName()|
         tlib#agent#CompleteAgentNames .......... |tlib#agent#CompleteAgentNames()|
+        tlib#agent#Complete .................... |tlib#agent#Complete()|
         tlib#bitwise#Num2Bits .................. |tlib#bitwise#Num2Bits()|
         tlib#bitwise#Bits2Num .................. |tlib#bitwise#Bits2Num()|
         tlib#bitwise#AND ....................... |tlib#bitwise#AND()|
@@ -215,6 +216,9 @@ Contents~
         tlib#tag#Format ........................ |tlib#tag#Format()|
         tlib#map#PumAccept ..................... |tlib#map#PumAccept()|
         tlib#Filter_cnfd#New ................... |tlib#Filter_cnfd#New()|
+        g:tlib#debug#backtrace ................. |g:tlib#debug#backtrace|
+        tlib#debug#Trace ....................... |tlib#debug#Trace()|
+        tlib#debug#Init ........................ |tlib#debug#Init()|
         g:tlib#input#sortprefs_threshold ....... |g:tlib#input#sortprefs_threshold|
         g:tlib#input#livesearch_threshold ...... |g:tlib#input#livesearch_threshold|
         g:tlib#input#filter_mode ............... |g:tlib#input#filter_mode|
@@ -245,7 +249,6 @@ Contents~
         g:tlib#file#use_tabs ................... |g:tlib#file#use_tabs|
         g:tlib#file#edit_cmds .................. |g:tlib#file#edit_cmds|
         g:tlib#file#absolute_filename_rx ....... |g:tlib#file#absolute_filename_rx|
-        g:tlib#file#fs_enc ..................... |g:tlib#file#fs_enc|
         tlib#file#Split ........................ |tlib#file#Split()|
         tlib#file#Join ......................... |tlib#file#Join()|
         tlib#file#Relative ..................... |tlib#file#Relative()|
@@ -253,11 +256,6 @@ Contents~
         tlib#file#Canonic ...................... |tlib#file#Canonic()|
         tlib#file#With ......................... |tlib#file#With()|
         tlib#file#Edit ......................... |tlib#file#Edit()|
-        tlib#file#FsEncoding ................... |tlib#file#FsEncoding()|
-        tlib#file#NativeFilename ............... |tlib#file#NativeFilename()|
-        tlib#file#WithNative ................... |tlib#file#WithNative()|
-        tlib#file#IsDirectory .................. |tlib#file#IsDirectory()|
-        tlib#file#FileReadable ................. |tlib#file#FileReadable()|
         g:tlib#sys#special_protocols ........... |g:tlib#sys#special_protocols|
         g:tlib#sys#special_suffixes ............ |g:tlib#sys#special_suffixes|
         g:tlib#sys#system_rx ................... |g:tlib#sys#system_rx|
@@ -275,6 +273,7 @@ Contents~
         tlib#sys#FileArgs ...................... |tlib#sys#FileArgs()|
         tlib#sys#IsSpecial ..................... |tlib#sys#IsSpecial()|
         tlib#sys#Open .......................... |tlib#sys#Open()|
+        tlib#sys#SystemInDir ................... |tlib#sys#SystemInDir()|
         tlib#paragraph#GetMetric ............... |tlib#paragraph#GetMetric()|
         tlib#paragraph#Move .................... |tlib#paragraph#Move()|
         g:tlib_inputlist_pct ................... |g:tlib_inputlist_pct|
@@ -284,6 +283,7 @@ Contents~
         tlib#World#New ......................... |tlib#World#New()|
         prototype.PrintLines
         prototype.Suspend
+        tlib#loclist#Browse .................... |tlib#loclist#Browse()|
         tlib#tab#BufMap ........................ |tlib#tab#BufMap()|
         tlib#tab#TabWinNr ...................... |tlib#tab#TabWinNr()|
         tlib#tab#Set ........................... |tlib#tab#Set()|
@@ -302,9 +302,9 @@ Contents~
         o_sp ................................... |o_sp|
         tlib#arg#Get ........................... |tlib#arg#Get()|
         tlib#arg#Let ........................... |tlib#arg#Let()|
-        tlib#arg#Key ........................... |tlib#arg#Key()|
         tlib#arg#StringAsKeyArgs ............... |tlib#arg#StringAsKeyArgs()|
         tlib#arg#StringAsKeyArgsEqual .......... |tlib#arg#StringAsKeyArgsEqual()|
+        tlib#arg#GetOpts ....................... |tlib#arg#GetOpts()|
         tlib#arg#Ex ............................ |tlib#arg#Ex()|
         tlib#fixes#Winpos ...................... |tlib#fixes#Winpos()|
         g:tlib#dir#sep ......................... |g:tlib#dir#sep|
@@ -335,6 +335,23 @@ Contents~
         tlib#grep#LocList ...................... |tlib#grep#LocList()|
         tlib#grep#QuickFixList ................. |tlib#grep#QuickFixList()|
         tlib#grep#List ......................... |tlib#grep#List()|
+        tlib#qfl#FormatQFLE .................... |tlib#qfl#FormatQFLE()|
+        tlib#qfl#QfeFilename ................... |tlib#qfl#QfeFilename()|
+        tlib#qfl#InitListBuffer ................ |tlib#qfl#InitListBuffer()|
+        tlib#qfl#Balloon ....................... |tlib#qfl#Balloon()|
+        tlib#qfl#AgentEditQFE .................. |tlib#qfl#AgentEditQFE()|
+        tlib#qfl#AgentPreviewQFE ............... |tlib#qfl#AgentPreviewQFE()|
+        tlib#qfl#AgentGotoQFE .................. |tlib#qfl#AgentGotoQFE()|
+        tlib#qfl#AgentWithSelected ............. |tlib#qfl#AgentWithSelected()|
+        tlib#qfl#RunCmdOnSelected .............. |tlib#qfl#RunCmdOnSelected()|
+        tlib#qfl#AgentSplitBuffer .............. |tlib#qfl#AgentSplitBuffer()|
+        tlib#qfl#AgentTabBuffer ................ |tlib#qfl#AgentTabBuffer()|
+        tlib#qfl#AgentVSplitBuffer ............. |tlib#qfl#AgentVSplitBuffer()|
+        tlib#qfl#AgentEditLine ................. |tlib#qfl#AgentEditLine()|
+        tlib#qfl#EditLine ...................... |tlib#qfl#EditLine()|
+        tlib#qfl#SetFollowCursor ............... |tlib#qfl#SetFollowCursor()|
+        tlib#qfl#QflList ....................... |tlib#qfl#QflList()|
+        tlib#qfl#Browse ........................ |tlib#qfl#Browse()|
         tlib#Filter_cnf#New .................... |tlib#Filter_cnf#New()|
         prototype.Pretty
         tlib#Object#New ........................ |tlib#Object#New()|
@@ -377,14 +394,6 @@ Contents~
 ========================================================================
 plugin/02tlib.vim~
 
-                                                    *:TRequire*
-:TRequire NAME [VERSION [FILE]]
-    Make a certain vim file is loaded.
-
-    Conventions: If FILE isn't defined, plugin/NAME.vim is loaded. The 
-    file must provide a variable loaded_{NAME} that represents the version 
-    number.
-
                                                     *:TLet*
 :TLet VAR = VALUE
     Set a variable only if it doesn't already exist.
@@ -417,17 +426,6 @@ plugin/02tlib.vim~
       endf
 <
 
-                                                    *:TKeyArg*
-:TKeyArg DICT, VAR1, [VAR2, DEFAULT2] ...
-    A convenience wrapper for |tlib#arg#Let|.
-    EXAMPLES: >
-      function! Foo(keyargs)
-          TKeyArg a:keyargs, ['a', 1], 'b'
-          echo 'a='. a
-          echo 'b='. b
-      endf
-<
-
                                                     *:TBrowseOutput*
 :TBrowseOutput COMMAND
     Ever wondered how to efficiently browse the output of a command 
@@ -454,9 +452,11 @@ plugin/02tlib.vim~
       TBrowseScriptnames 
 <
 
-                                                    *:TTimeCommand*
-:TTimeCommand CMD
-    Time the execution time of CMD.
+                                                    *:TLibTrace*
+:TLibTrace GUARD, VAR1, VAR2...
+    If GUARD is a number that evaluates to true or if it is a string and 
+    g:tlib#debug#trace_GUARD is defined and true, display the values of 
+    VAR1, VAR2 ...
 
 
 ========================================================================
@@ -621,6 +621,9 @@ autoload/tlib/eval.vim~
                                                     *tlib#eval#FormatValue()*
 tlib#eval#FormatValue(value, ...)
 
+                                                    *tlib#eval#Extend()*
+tlib#eval#Extend(a, b)
+
 
 ========================================================================
 autoload/tlib/list.vim~
@@ -739,6 +742,9 @@ tlib#cmd#DefaultBrowseOutput(cmd)
 
                                                     *tlib#cmd#ParseScriptname()*
 tlib#cmd#ParseScriptname(line)
+
+                                                    *tlib#cmd#TBrowseScriptnames()*
+tlib#cmd#TBrowseScriptnames()
 
                                                     *tlib#cmd#UseVertical()*
 tlib#cmd#UseVertical(?rx='')
@@ -944,7 +950,7 @@ tlib#cache#Dir(?mode = 'bg')
 tlib#cache#Filename(type, ?file=%, ?mkdir=0, ?dir='')
 
                                                     *tlib#cache#Save()*
-tlib#cache#Save(cfile, dictionary)
+tlib#cache#Save(cfile, dictionary, ...)
 
                                                     *tlib#cache#MTime()*
 tlib#cache#MTime(cfile)
@@ -953,7 +959,7 @@ tlib#cache#MTime(cfile)
 tlib#cache#Get(cfile, ...)
 
                                                     *tlib#cache#Value()*
-tlib#cache#Value(cfile, generator, ftime, ...)
+tlib#cache#Value(cfile, generator, ftime, ?generator_args=[], ?options={})
     Get a cached value from cfile. If it is outdated (compared to ftime) 
     or does not exist, create it calling a generator function.
 
@@ -1211,6 +1217,9 @@ tlib#agent#ExecAgentByName(world, selected)
                                                     *tlib#agent#CompleteAgentNames()*
 tlib#agent#CompleteAgentNames(ArgLead, CmdLine, CursorPos)
 
+                                                    *tlib#agent#Complete()*
+tlib#agent#Complete(world, selected)
+
 
 ========================================================================
 autoload/tlib/bitwise.vim~
@@ -1374,6 +1383,19 @@ tlib#Filter_cnfd#New(...)
     The same as |tlib#Filter_cnf#New()| but a dot is expanded to '\.\{-}'. 
     As a consequence, patterns cannot match dots.
     The pattern is a '/\V' very no-'/magic' regexp pattern.
+
+
+========================================================================
+autoload/tlib/debug.vim~
+
+                                                    *g:tlib#debug#backtrace*
+g:tlib#debug#backtrace         (default: 2)
+
+                                                    *tlib#debug#Trace()*
+tlib#debug#Trace(caller, vars, values)
+
+                                                    *tlib#debug#Init()*
+tlib#debug#Init()
 
 
 ========================================================================
@@ -1542,6 +1564,9 @@ tlib#input#List(type. ?query='', ?list=[], ?handlers=[], ?default="", ?timeout=0
     Several pattern matching styles are supported. See 
     |g:tlib#input#filter_mode|.
 
+    Users can type <Tab> to complete the current filter with the longest 
+    match.
+
     EXAMPLES: >
       echo tlib#input#List('s', 'Select one item', [100,200,300])
       echo tlib#input#List('si', 'Select one item', [100,200,300])
@@ -1627,9 +1652,6 @@ g:tlib#file#edit_cmds          (default: g:tlib#file#use_tabs ? {'buffer': 'tab 
                                                     *g:tlib#file#absolute_filename_rx*
 g:tlib#file#absolute_filename_rx (default: '^\~\?[\/]')
 
-                                                    *g:tlib#file#fs_enc*
-g:tlib#file#fs_enc             (default: 'utf-8')
-
                                                     *tlib#file#Split()*
 tlib#file#Split(filename)
     EXAMPLES: >
@@ -1664,21 +1686,6 @@ tlib#file#With(fcmd, bcmd, files, ?world={})
 tlib#file#Edit(fileid)
     Return 0 if the file isn't readable/doesn't exist.
     Otherwise return 1.
-
-                                                    *tlib#file#FsEncoding()*
-tlib#file#FsEncoding(filename, ...)
-
-                                                    *tlib#file#NativeFilename()*
-tlib#file#NativeFilename(filename, ...)
-
-                                                    *tlib#file#WithNative()*
-tlib#file#WithNative(fn, filename, ...)
-
-                                                    *tlib#file#IsDirectory()*
-tlib#file#IsDirectory(filename)
-
-                                                    *tlib#file#FileReadable()*
-tlib#file#FileReadable(filename)
 
 
 ========================================================================
@@ -1758,6 +1765,9 @@ tlib#sys#Open(filename)
     |g:tlib#sys#system_browser|), if |tlib#sys#IsSpecial()| return 1. 
     Returns 1 if successful or 0 otherwise.
 
+                                                    *tlib#sys#SystemInDir()*
+tlib#sys#SystemInDir(dir, expr, ?input='')
+
 
 ========================================================================
 autoload/tlib/paragraph.vim~
@@ -1813,6 +1823,13 @@ tlib#World#New(...)
 prototype.PrintLines
 
 prototype.Suspend
+
+
+========================================================================
+autoload/tlib/loclist.vim~
+
+                                                    *tlib#loclist#Browse()*
+tlib#loclist#Browse(...)
 
 
 ========================================================================
@@ -1913,15 +1930,29 @@ tlib#arg#Let(list, ?default='')
     Set a positional arguments from a variable argument list.
     See tlib#input#List() for an example.
 
-                                                    *tlib#arg#Key()*
-tlib#arg#Key(dict, list, ?default='')
-    See |:TKeyArg|.
-
                                                     *tlib#arg#StringAsKeyArgs()*
-tlib#arg#StringAsKeyArgs(string, ?keys=[], ?evaluate=0, ?sep=':')
+tlib#arg#StringAsKeyArgs(string, ?keys=[], ?evaluate=0, ?sep=':', ?booleans=0)
 
                                                     *tlib#arg#StringAsKeyArgsEqual()*
 tlib#arg#StringAsKeyArgsEqual(string)
+
+                                                    *tlib#arg#GetOpts()*
+tlib#arg#GetOpts(args, ?def={})
+    Convert a list of strings of command-line arguments into a dictonary.
+
+    The main use case is to pass [<f-args>], i.e. the command-line 
+    arguments of a command as list, from a command definition to this 
+    function.
+
+    Example:
+    ['-h']
+    => If def contains a 'help' key, invoke |:help| on its value.
+
+    ['-ab', '--foo', '--bar=BAR', 'bla', bla']
+    => {'a': 1, 'b': 1, 'foo': 1, 'bar': 'BAR', '__rest__': ['bla', 'bla']}
+
+    ['-ab', '--', '--foo', '--bar=BAR']
+    => {'a': 1, 'b': 1, '__rest__': ['--foo', '--bar=BAR']}
 
                                                     *tlib#arg#Ex()*
 tlib#arg#Ex(arg, ?chars='%#! ')
@@ -2063,6 +2094,61 @@ tlib#grep#QuickFixList(rx, files)
 
                                                     *tlib#grep#List()*
 tlib#grep#List(rx, files)
+
+
+========================================================================
+autoload/tlib/qfl.vim~
+
+                                                    *tlib#qfl#FormatQFLE()*
+tlib#qfl#FormatQFLE(qfe)
+
+                                                    *tlib#qfl#QfeFilename()*
+tlib#qfl#QfeFilename(qfe)
+
+                                                    *tlib#qfl#InitListBuffer()*
+tlib#qfl#InitListBuffer(world)
+
+                                                    *tlib#qfl#Balloon()*
+tlib#qfl#Balloon()
+
+                                                    *tlib#qfl#AgentEditQFE()*
+tlib#qfl#AgentEditQFE(world, selected, ...)
+
+                                                    *tlib#qfl#AgentPreviewQFE()*
+tlib#qfl#AgentPreviewQFE(world, selected)
+
+                                                    *tlib#qfl#AgentGotoQFE()*
+tlib#qfl#AgentGotoQFE(world, selected)
+
+                                                    *tlib#qfl#AgentWithSelected()*
+tlib#qfl#AgentWithSelected(world, selected, ...)
+
+                                                    *tlib#qfl#RunCmdOnSelected()*
+tlib#qfl#RunCmdOnSelected(world, selected, cmd, ...)
+
+                                                    *tlib#qfl#AgentSplitBuffer()*
+tlib#qfl#AgentSplitBuffer(world, selected)
+
+                                                    *tlib#qfl#AgentTabBuffer()*
+tlib#qfl#AgentTabBuffer(world, selected)
+
+                                                    *tlib#qfl#AgentVSplitBuffer()*
+tlib#qfl#AgentVSplitBuffer(world, selected)
+
+                                                    *tlib#qfl#AgentEditLine()*
+tlib#qfl#AgentEditLine(world, selected)
+
+                                                    *tlib#qfl#EditLine()*
+tlib#qfl#EditLine(lnum)
+
+                                                    *tlib#qfl#SetFollowCursor()*
+tlib#qfl#SetFollowCursor(world, selected)
+
+                                                    *tlib#qfl#QflList()*
+tlib#qfl#QflList(list, ...)
+
+                                                    *tlib#qfl#Browse()*
+tlib#qfl#Browse(...)
 
 
 ========================================================================

@@ -85,23 +85,8 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" 代码匹配 PHPComplete "
-" NeoBundle 'shawncplus/phpcomplete.vim'
-
 " 路径文件检索 Ctrlp "
 NeoBundle 'kien/ctrlp.vim'
-
-" 代码高亮 CSS3 Syntax "
-" NeoBundle 'hail2u/vim-css3-syntax'
-
-" 代码高亮 JavaScript "
-" NeoBundle 'jelera/vim-javascript-syntax'
-
-" SCSS "
-NeoBundle 'cakebaker/scss-syntax.vim'
-
-" Rails "
-" NeoBundle 'tpope/vim-rails'
 
 " 代码片段 snipMate "
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
@@ -141,33 +126,6 @@ NeoBundle 'ervandew/supertab'
 let g:SuperTabRetainCompletionType = 1
 let g:SuperTabDefaultCompletionType = "<C-X><C-N>"
 
-" 彩虹括号 Rainbow Parentheses "
-" NeoBundle 'kien/rainbow_parentheses.vim'
-" let g:rbpt_colorpairs = [
-"     \ ['brown',       'RoyalBlue3'],
-"     \ ['Darkblue',    'SeaGreen3'],
-"     \ ['darkgray',    'DarkOrchid3'],
-"     \ ['darkgreen',   'firebrick3'],
-"     \ ['darkcyan',    'RoyalBlue3'],
-"     \ ['darkred',     'SeaGreen3'],
-"     \ ['darkmagenta', 'DarkOrchid3'],
-"     \ ['brown',       'firebrick3'],
-"     \ ['gray',        'RoyalBlue3'],
-"     \ ['black',       'SeaGreen3'],
-"     \ ['darkmagenta', 'DarkOrchid3'],
-"     \ ['Darkblue',    'firebrick3'],
-"     \ ['darkgreen',   'RoyalBlue3'],
-"     \ ['darkcyan',    'SeaGreen3'],
-"     \ ['darkred',     'DarkOrchid3'],
-"     \ ['red',         'firebrick3'],
-"     \ ]
-" let g:rbpt_max = 16
-" let g:rbpt_loadcmd_toggle = 0
-" au VimEnter * RainbowParenthesesToggle
-" au Syntax * RainbowParenthesesLoadRound
-" au Syntax * RainbowParenthesesLoadSquare
-" au Syntax * RainbowParenthesesLoadBraces
-
 " 简单跳转 EasyMotion "
 NeoBundle 'Lokaltog/vim-easymotion'
 let g:EasyMotion_leader_key = '<Leader>' " \\ +w 跳转 \\ + fe 查找e
@@ -180,12 +138,6 @@ map J <Plug>(expand_region_shrink)
 " 多重选择 "
 NeoBundle 'terryma/vim-multiple-cursors'
 " c-n c-p c-x s or c 删除"
-
-" Laravel Blade Syntax "
-" NeoBundle 'xsbeats/vim-blade'
-
-" Twig Template "
-" NeoBundle 'evidens/vim-twig'
 
 " 语法检查 Syntastic "
 NeoBundle 'scrooloose/syntastic'
@@ -201,9 +153,6 @@ autocmd BufNewFile,BufRead *.slim setf slim
 NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'cfurrow/vim-l9'
 
-" Slim template "
-" NeoBundle 'slim-template/vim-slim'
-
 " CtrlSf "
 NeoBundle 'dyng/ctrlsf.vim'
 let g:ctrlsf_ackprg = 'ag'
@@ -212,6 +161,7 @@ nnoremap <C-F> :CtrlSF<space>
 "F3 搜索当前光标所在单词
 nmap <F3> <ESC>:CtrlSF <c-r><c-w><CR>
 nmap <C-F3> <ESC>:CtrlSFOpen<CR>
+
 " BufExplorer
 NeoBundle 'jlanzarotta/bufexplorer'
 
@@ -225,28 +175,9 @@ NeoBundle 'Shougo/unite.vim'
 " WakaTime 统计编码时间
 NeoBundle 'wakatime/vim-wakatime'
 
-" Scala Syntax
-" NeoBundle 'derekwyatt/vim-scala'
-
 " 缩进线
 NeoBundle 'Yggdroot/indentLine'
 let g:indentLine_faster = 1
-
-" Vdebug
-NeoBundle 'joonty/vdebug'
-let g:vdebug_options= {
-\    "port" : 9001,
-\    "server" : 'localhost',
-\    "timeout" : 20,
-\    "on_close" : 'detach',
-\    "break_on_open" : 1,
-\    "ide_key" : '',
-\    "remote_path" : "",
-\    "local_path" : "",
-\    "debug_window_level" : 0,
-\    "debug_file_level" : 0,
-\    "debug_file" : "",
-\}
 
 call neobundle#end()
 filetype plugin indent on

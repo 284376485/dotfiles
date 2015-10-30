@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/xi4oh4o/Sites/outsource/app'
 let g:netrw_dirhist_2='/Users/xi4oh4o/Sites/outsource/app/Wechat'
+let g:netrw_dirhist_3='/Users/xi4oh4o/Sites/outsource/app/Console/Commands'
+let g:netrw_dirhist_4='/Users/xi4oh4o/Sites/outsource/app/Console'
+let g:netrw_dirhist_5='/Users/xi4oh4o/Sites/outsource/app'
+let g:netrw_dirhist_6='/Users/xi4oh4o/Sites/outsource/app/Http'
+let g:netrw_dirhist_7='/Users/xi4oh4o/Sites/outsource/app/Http/Controllers'
