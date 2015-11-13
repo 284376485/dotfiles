@@ -111,6 +111,9 @@ set smartindent
 " Scroll when cursor gets within 3 characters of top/bottom edge
 set scrolloff=5
 
+" Set cursorline
+set cursorline
+
 " Round indent to multiple of 'shiftwidth' for > and < commands
 set shiftround
 
@@ -182,7 +185,7 @@ let g:netrw_browse_split = 1
 " MAPPINGS
 "
 " custom esc keys
-imap jj <esc>
+imap jk <esc>
 
 " save changes
 map ,s :w<CR>
@@ -414,3 +417,4 @@ endfunction
 "set undolevels=1000 "maximum number of changes that can be undone
 "set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
+highlight CursorLine cterm=none ctermbg=233 ctermfg=NONE
