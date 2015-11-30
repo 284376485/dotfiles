@@ -271,6 +271,7 @@ set background=dark
 " let g:rehash256 = 1
 " colorscheme PaperColor
 colorscheme solarized
+let g:solarized_termcolors=256
 " colorscheme molokai
 " colorscheme Tomorrow-Night-Bright
 " colorscheme desertEx
