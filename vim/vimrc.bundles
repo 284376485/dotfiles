@@ -49,6 +49,9 @@ let g:ycm_key_invoke_completion = '<C-Space>'
 " Ruby "
 " NeoBundle 'vim-ruby/vim-ruby'
 
+" VimWiki "
+NeoBundle 'vimwiki/vimwiki'
+
 " 标签闭合 delimitMate  "
 NeoBundle 'Raimondi/delimitMate'
 

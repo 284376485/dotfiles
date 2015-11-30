@@ -30,4 +30,5 @@ vim-snippets
 vim-surround
 vim-wakatime
 vimproc
+vimwiki
 wells-colorscheme.vim
