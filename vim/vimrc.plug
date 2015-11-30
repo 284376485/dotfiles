@@ -1,8 +1,185 @@
 call plug#begin('~/.vim/plugged')
 
-" Plug 'junegunn/seoul256.vim'
+" 自动补全 "
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+"youcompleteme 默认tab s-tab 和自动补全冲突
+" let g:ycm_key_list_select_completion=['<c-n>']
+let g:ycm_key_list_select_completion = ['<Down>']
+" let g:ycm_key_list_previous_completion=['<c-p>']
+let g:ycm_key_list_previous_completion = ['<Up>']
+"在注释输入中也能补全 
+let g:ycm_complete_in_comments = 1
+"在字符串输入中也能补全 
+let g:ycm_complete_in_strings = 1
+"注释和字符串中的文字也会被收入补全
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+"语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
+"let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_collect_identifiers_from_tags_files = 1
+" 引入，可以补全系统，以及python的第三方包 
+let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py" 
+"直接触发自动补全
+let g:ycm_key_invoke_completion = '<C-Space>'
+
+" 语法支持 HTML5 "
+" Plug 'othree/html5.vim'
+
+" Ruby "
+" Plug 'vim-ruby/vim-ruby'
+
+" VimWiki "
+Plug 'vimwiki/vimwiki'
+
+" 标签闭合 delimitMate  "
+Plug 'Raimondi/delimitMate'
+
+" 代码补全 Emmet "
+Plug 'mattn/emmet-vim'
+
+" 文件树导航 Nerdtree "
+Plug 'scrooloose/nerdtree'
+" Increase window size to 35 columns
+let NERDTreeWinSize=35
+map <F7> to toggle NERDTree window
+nmap <silent> <F7> :NERDTreeToggle<CR>
+
+" 状态栏增强 PowerLine "
+" Plug 'Lokaltog/vim-powerline'
+Plug 'bling/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = ''
+let g:airline_right_sep = '«'
+let g:airline_right_sep = ''
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+"let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" 路径文件检索 Ctrlp "
+Plug 'kien/ctrlp.vim'
+
+" 代码片段 snipMate "
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+
+" 标签导航 Tagbar "
+" Plug 'majutsushi/tagbar'
+" nmap <F8> :TagbarToggle<CR>
+
+" 代码对齐 Tabular "
+Plug 'godlygeek/tabular'
+
+" 代码注释 tcomment "
+Plug 'tomtom/tcomment_vim'
+
+" 简单对齐 Vim easy Align "
+Plug 'junegunn/vim-easy-align'
+vnoremap <silent> <Enter> :EasyAlign<Enter>
+
+" 配色 Solarized "
+Plug 'altercation/vim-colors-solarized'
+
+" 配色 flattown "
+Plug 'blerins/flattown'
+Plug 'wellsjo/wells-colorscheme.vim'
+
+" 配色 PaperColor "
+Plug 'NLKNguyen/papercolor-theme'
+
+" 配色 Material "
+Plug 'jdkanani/vim-material-theme'
+" 配色 Seoul256 "
+Plug 'junegunn/seoul256.vim'
+
+" Distraction-free writing "
 Plug 'junegunn/goyo.vim'
+
+" Ack "
 Plug 'mileszs/ack.vim'
+
+" 超级Tab SuperTab "
+Plug 'ervandew/supertab'
+let g:SuperTabRetainCompletionType = 1
+let g:SuperTabDefaultCompletionType = "<C-X><C-N>"
+
+" 简单跳转 EasyMotion "
+Plug 'easymotion/vim-easymotion'
+let g:EasyMotion_leader_key = '<Leader>' " \\ +w 跳转 \\ + fe 查找e
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+nmap s <Plug>(easymotion-s2)
+nmap t <Plug>(easymotion-t2)
+
+" 快速选中 Expand region "
+Plug 'terryma/vim-expand-region'
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
+
+" 多重选择 "
+Plug 'terryma/vim-multiple-cursors'
+" c-n c-p c-x s or c 删除"
+
+" 语法检查 Syntastic "
+Plug 'scrooloose/syntastic'
+let g:syntastic_check_on_open = 1
+"set error or warning signs
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+"whether to show balloons
+let g:syntastic_enable_balloons = 1
+autocmd BufNewFile,BufRead *.slim setf slim
+
+" 自动弹出 AutoComplPop "
+Plug 'othree/vim-autocomplpop'
+Plug 'cfurrow/vim-l9'
+
+" CtrlSf "
+Plug 'dyng/ctrlsf.vim'
+let g:ctrlsf_ackprg = 'ag'
+" Ctrl + F搜索
+nnoremap <C-F> :CtrlSF<space>
+"F3 搜索当前光标所在单词
+nmap <F3> <ESC>:CtrlSF <c-r><c-w><CR>
+nmap <C-F3> <ESC>:CtrlSFOpen<CR>
+
+" BufExplorer
+Plug 'jlanzarotta/bufexplorer'
+
+" Surround 外围符号
+Plug 'tpope/vim-surround'
+" cs"', ds", ysiw), VS<p class"icon>
+
+" Unite 扩展
+Plug 'Shougo/unite.vim'
+
+" WakaTime 统计编码时间
+Plug 'wakatime/vim-wakatime'
+
+" 缩进线
+Plug 'Yggdroot/indentLine'
+let g:indentLine_faster = 1
+
 " Plug 'user/repo1', 'branch_or_tag'
 " Plug 'user/repo2', { 'rtp': 'vim/plugin/dir', 'branch': 'devel' }
 " Plug 'git@github.com:junegunn/vim-github-dashboard.git'

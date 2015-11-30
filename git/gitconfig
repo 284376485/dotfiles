@@ -18,6 +18,7 @@
 [core]
 	excludesfile = /Users/xi4oh4o/.gitignore
 	filemode = false
+	gitproxy = git-proxy
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -29,3 +30,7 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[http]
+	proxy = socks5://127.0.0.1:9129
+[https]
+	proxy = socks5://127.0.0.1:9129
