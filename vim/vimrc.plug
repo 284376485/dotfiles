@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 " 自动补全 "
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 "youcompleteme 默认tab s-tab 和自动补全冲突
 " let g:ycm_key_list_select_completion=['<c-n>']
@@ -29,7 +30,7 @@ let g:ycm_key_invoke_completion = '<C-Space>'
 " Plug 'vim-ruby/vim-ruby'
 
 " VimWiki "
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 
 " 标签闭合 delimitMate  "
 Plug 'Raimondi/delimitMate'
@@ -38,15 +39,16 @@ Plug 'Raimondi/delimitMate'
 Plug 'mattn/emmet-vim'
 
 " 文件树导航 Nerdtree "
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 " Increase window size to 35 columns
-let NERDTreeWinSize=35
-map <F7> to toggle NERDTree window
-nmap <silent> <F7> :NERDTreeToggle<CR>
+" let NERDTreeWinSize=35
+" map <F7> to toggle NERDTree window
+" nmap <silent> <F7> :NERDTreeToggle<CR>
 
 " 状态栏增强 PowerLine "
 " Plug 'Lokaltog/vim-powerline'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 
 if !exists('g:airline_symbols')
@@ -60,28 +62,43 @@ let g:airline_right_sep = '«'
 let g:airline_right_sep = ''
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
-"let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" 路径文件检索 Ctrlp "
-Plug 'kien/ctrlp.vim'
+" 路径文件检索 fzf "
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+nnoremap <C-P> :FZF<ENTER>
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" Advanced customization using autoload functions
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
 " 代码片段 snipMate "
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
+" Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'tomtom/tlib_vim'
+" Plug 'garbas/vim-snipmate'
+" Plug 'honza/vim-snippets'
 
 " 标签导航 Tagbar "
-" Plug 'majutsushi/tagbar'
-" nmap <F8> :TagbarToggle<CR>
+Plug 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
 
 " 代码对齐 Tabular "
-Plug 'godlygeek/tabular'
+" Plug 'godlygeek/tabular'
 
 " 代码注释 tcomment "
 Plug 'tomtom/tcomment_vim'
@@ -91,22 +108,22 @@ Plug 'junegunn/vim-easy-align'
 vnoremap <silent> <Enter> :EasyAlign<Enter>
 
 " 配色 Solarized "
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
 
 " 配色 flattown "
-Plug 'blerins/flattown'
-Plug 'wellsjo/wells-colorscheme.vim'
+" Plug 'blerins/flattown'
+" Plug 'wellsjo/wells-colorscheme.vim'
 
 " 配色 PaperColor "
-Plug 'NLKNguyen/papercolor-theme'
+" Plug 'NLKNguyen/papercolor-theme'
 
 " 配色 Material "
-Plug 'jdkanani/vim-material-theme'
+" Plug 'jdkanani/vim-material-theme'
 " 配色 Seoul256 "
-Plug 'junegunn/seoul256.vim'
+" Plug 'junegunn/seoul256.vim'
 
 " Distraction-free writing "
-Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/goyo.vim'
 
 " Ack "
 Plug 'mileszs/ack.vim'
@@ -119,17 +136,17 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-N>"
 " 简单跳转 EasyMotion "
 Plug 'easymotion/vim-easymotion'
 let g:EasyMotion_leader_key = '<Leader>' " \\ +w 跳转 \\ + fe 查找e
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
-nmap s <Plug>(easymotion-s2)
-nmap t <Plug>(easymotion-t2)
+" map <Leader>l <Plug>(easymotion-lineforward)
+" map <Leader>j <Plug>(easymotion-j)
+" map <Leader>k <Plug>(easymotion-k)
+" map <Leader>h <Plug>(easymotion-linebackward)
+" let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+" map  / <Plug>(easymotion-sn)
+" omap / <Plug>(easymotion-tn)
+" map  n <Plug>(easymotion-next)
+" map  N <Plug>(easymotion-prev)
+" nmap s <Plug>(easymotion-s2)
+" nmap t <Plug>(easymotion-t2)
 
 " 快速选中 Expand region "
 Plug 'terryma/vim-expand-region'
@@ -148,6 +165,8 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 "whether to show balloons
 let g:syntastic_enable_balloons = 1
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {'regex': 'possibly useless use of a variable in void context'}
 autocmd BufNewFile,BufRead *.slim setf slim
 
 " 自动弹出 AutoComplPop "
@@ -179,6 +198,9 @@ Plug 'wakatime/vim-wakatime'
 " 缩进线
 Plug 'Yggdroot/indentLine'
 let g:indentLine_faster = 1
+
+" SCSS
+Plug 'cakebaker/scss-syntax.vim'
 
 " Plug 'user/repo1', 'branch_or_tag'
 " Plug 'user/repo2', { 'rtp': 'vim/plugin/dir', 'branch': 'devel' }

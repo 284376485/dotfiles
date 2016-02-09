@@ -270,8 +270,8 @@ set background=dark
 " let g:molokai_original = 1
 " let g:rehash256 = 1
 " colorscheme PaperColor
-colorscheme solarized
 let g:solarized_termcolors=256
+colorscheme solarized
 " colorscheme molokai
 " colorscheme Tomorrow-Night-Bright
 " colorscheme desertEx
@@ -279,7 +279,6 @@ let g:solarized_termcolors=256
 " colorscheme flattown
 " colorscheme beekai
 " colorscheme material-theme
-
 map fe :set fileencoding<CR>
 
 if has("autocmd")
@@ -418,4 +417,4 @@ endfunction
 "set undolevels=1000 "maximum number of changes that can be undone
 "set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
-highlight CursorLine cterm=none ctermbg=233 ctermfg=NONE
+" highlight CursorLine cterm=none ctermbg=233 ctermfg=NONE
