@@ -3,34 +3,50 @@ call plug#begin('~/.vim/plugged')
 " 自动补全 "
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
-"youcompleteme 默认tab s-tab 和自动补全冲突
-" let g:ycm_key_list_select_completion=['<c-n>']
-let g:ycm_key_list_select_completion = ['<Down>']
-" let g:ycm_key_list_previous_completion=['<c-p>']
-let g:ycm_key_list_previous_completion = ['<Up>']
-"在注释输入中也能补全 
-let g:ycm_complete_in_comments = 1
-"在字符串输入中也能补全 
-let g:ycm_complete_in_strings = 1
-"注释和字符串中的文字也会被收入补全
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-"语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
-"let g:ycm_seed_identifiers_with_syntax=1
-let g:ycm_collect_identifiers_from_tags_files = 1
-" 引入，可以补全系统，以及python的第三方包 
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py" 
-"直接触发自动补全
-let g:ycm_key_invoke_completion = '<C-Space>'
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+" "youcompleteme 默认tab s-tab 和自动补全冲突
+" " let g:ycm_key_list_select_completion=['<c-n>']
+" let g:ycm_key_list_select_completion = ['<Down>']
+" " let g:ycm_key_list_previous_completion=['<c-p>']
+" let g:ycm_key_list_previous_completion = ['<Up>']
+" "在注释输入中也能补全 
+" let g:ycm_complete_in_comments = 1
+" "在字符串输入中也能补全 
+" let g:ycm_complete_in_strings = 1
+" "注释和字符串中的文字也会被收入补全
+" let g:ycm_collect_identifiers_from_comments_and_strings = 1
+" "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
+" "let g:ycm_seed_identifiers_with_syntax=1
+" let g:ycm_collect_identifiers_from_tags_files = 1
+" " 引入，可以补全系统，以及python的第三方包 
+" let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py" 
+" "直接触发自动补全
+" let g:ycm_key_invoke_completion = '<C-Space>'
 
 " 语法支持 HTML5 "
 " Plug 'othree/html5.vim'
+
+" CoffeeScript
+Plug 'kchmck/vim-coffee-script'
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" インデント設定
+autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
+" オートコンパイル
+  "保存と同時にコンパイルする
+autocmd BufWritePost *.coffee silent make! 
+  "エラーがあったら別ウィンドウで表示
+autocmd QuickFixCmdPost * nested cwindow | redraw! 
+" Ctrl-cで右ウィンドウにコンパイル結果を一時表示する
+nnoremap <silent> <C-C> :CoffeeCompile vert <CR><C-w>h
+
+" Pug
+Plug 'digitaltoad/vim-pug'
 
 " Ruby "
 " Plug 'vim-ruby/vim-ruby'
 
 " VimWiki "
-" Plug 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 
 " 标签闭合 delimitMate  "
 Plug 'Raimondi/delimitMate'
@@ -70,28 +86,28 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " 路径文件检索 fzf "
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-nnoremap <C-P> :FZF<ENTER>
-" Mapping selecting mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
-
-" Insert mode completion
-imap <c-x><c-k> <plug>(fzf-complete-word)
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-imap <c-x><c-l> <plug>(fzf-complete-line)
-
-" Advanced customization using autoload functions
-inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
+" nnoremap <C-P> :FZF<ENTER>
+" " Mapping selecting mappings
+" nmap <leader><tab> <plug>(fzf-maps-n)
+" xmap <leader><tab> <plug>(fzf-maps-x)
+" omap <leader><tab> <plug>(fzf-maps-o)
+"
+" " Insert mode completion
+" imap <c-x><c-k> <plug>(fzf-complete-word)
+" imap <c-x><c-f> <plug>(fzf-complete-path)
+" imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+" imap <c-x><c-l> <plug>(fzf-complete-line)
+"
+" " Advanced customization using autoload functions
+" inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 
 " 代码片段 snipMate "
-" Plug 'MarcWeber/vim-addon-mw-utils'
-" Plug 'tomtom/tlib_vim'
-" Plug 'garbas/vim-snipmate'
-" Plug 'honza/vim-snippets'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 
 " 标签导航 Tagbar "
 Plug 'majutsushi/tagbar'
@@ -201,6 +217,9 @@ let g:indentLine_faster = 1
 
 " SCSS
 Plug 'cakebaker/scss-syntax.vim'
+
+" PHP
+Plug 'StanAngeloff/php.vim'
 
 " Plug 'user/repo1', 'branch_or_tag'
 " Plug 'user/repo2', { 'rtp': 'vim/plugin/dir', 'branch': 'devel' }

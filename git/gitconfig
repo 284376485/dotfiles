@@ -19,6 +19,7 @@
 	excludesfile = /Users/xi4oh4o/.gitignore
 	filemode = false
 	gitproxy = git-proxy
+	editor = nvim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

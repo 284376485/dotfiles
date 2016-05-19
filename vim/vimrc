@@ -283,6 +283,7 @@ map fe :set fileencoding<CR>
 
 if has("autocmd")
     autocmd BufRead,BufNewFile *.scss set filetype=scss.css
+
 "   autocmd FileType python set complete+=k
     autocmd FileType php set complete-=k complete+=k
 "   autocmd FileType php set dictionary=$HOME/.vim/dict/php.dict
@@ -397,6 +398,16 @@ function RestoreSession()
     "Make sure the syntax is on
     syntax on
 endfunction
+
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 " func! DeleteTrailingWS()

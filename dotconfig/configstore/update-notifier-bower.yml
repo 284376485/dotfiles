@@ -1,2 +1,7 @@
 optOut: false
-lastUpdateCheck: 1449456359701
+lastUpdateCheck: 1455589951856
+update:
+  latest: 1.7.7
+  current: 1.6.9
+  type: minor
+  name: bower
