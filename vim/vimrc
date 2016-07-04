@@ -1,17 +1,15 @@
 " MAIN CUSTOMIZATION FILE
 "
+
+if filereadable(expand("~/.vimrc.plug"))
+  source ~/.vimrc.plug
+endif
+
 " Enable loading filetype and indentation plugins
 filetype plugin on
 filetype indent on
 filetype on
 set re=1
-" if filereadable(expand("~/.vimrc.bundles"))
-"    source ~/.vimrc.bundles
-" endif
-
-if filereadable(expand("~/.vimrc.plug"))
-  source ~/.vimrc.plug
-endif
 
 " Turn syntax highlighting on
 syntax on
@@ -51,7 +49,7 @@ set ambiwidth=double
 set fencs=utf-8,gbk,gb2312
 set fenc=utf-8
 
-set nocompatible
+" set nocompatible
 
 " " Enable hidden
 set hidden
@@ -128,7 +126,7 @@ set showmode
 set showmatch
 
 " Don't request terminal version string (for xterm)
-set t_RV=
+" set t_RV=
 
 " Use 4 spaces for <Tab> and :retab
 set tabstop=2
@@ -265,7 +263,7 @@ highlight treeUp cterm=none ctermfg=DarkYellow
 highlight treeCWD cterm=none ctermfg=DarkYellow
 highlight netrwDir cterm=none ctermfg=Cyan
 
-set t_Co=256
+" set t_Co=256
 set background=dark
 " let g:molokai_original = 1
 " let g:rehash256 = 1

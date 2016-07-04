@@ -30,6 +30,33 @@
     "userName" : "",
     "userPassword" : ""
    }
+  },
+  {
+   "connectionName" : "Lefen Test",
+   "credentials" : [
+    {
+     "databaseName" : "admin",
+     "enabled" : true,
+     "mechanism" : "SCRAM-SHA-1",
+     "userName" : "admin",
+     "userPassword" : "912913"
+    }
+   ],
+   "defaultDatabase" : "",
+   "serverHost" : "g.lefenmall.com",
+   "serverPort" : 27017,
+   "ssh" : {
+    "askPassword" : false,
+    "enabled" : false,
+    "host" : "",
+    "method" : "publickey",
+    "passphrase" : "",
+    "port" : 22,
+    "privateKeyFile" : "",
+    "publicKeyFile" : "",
+    "userName" : "",
+    "userPassword" : ""
+   }
   }
  ],
  "disableConnectionShortcuts" : false,

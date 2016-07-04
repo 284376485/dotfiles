@@ -30,3 +30,14 @@ TrustedCommand.php
 
 # Idea
 .idea
+
+# VSCode
+.vscode
+
+# Subversion
+.svn
+
+.buildpath
+.idea/
+.project
+.settings/
